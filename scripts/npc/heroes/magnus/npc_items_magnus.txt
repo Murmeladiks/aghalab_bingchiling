@@ -1,0 +1,402 @@
+"Hero_Magnus"
+{
+	//=================================================================================================================
+	// Magnus Flat Shockwave Damage
+	//=================================================================================================================
+	"item_aghsfort_magnataur_shockwave_flat_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_shockwave_flat_damage"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "75"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus Shockwave Mana Cost
+	//=================================================================================================================
+	"item_aghsfort_magnataur_shockwave_mana_cost_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_shockwave_pct_mana_cost"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "7"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus Empower Flat Damage
+	//=================================================================================================================
+	"item_aghsfort_magnataur_empower_flat_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_empower_flat_damage"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "7"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus Empower Flat Cleave
+	//=================================================================================================================
+	"item_aghsfort_magnataur_empower_flat_cleave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_empower_flat_cleave"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "10"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus Skewer Flat Damage
+	//=================================================================================================================
+	"item_aghsfort_magnataur_skewer_flat_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_skewer_flat_damage"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "85"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus Skewer Cooldown
+	//=================================================================================================================
+	"item_aghsfort_magnataur_skewer_mana_cost_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_skewer_pct_cooldown"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "7"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus RP Damage
+	//=================================================================================================================
+	"item_aghsfort_magnataur_reverse_polarity_flat_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_reverse_polarity_flat_damage"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "150"
+        }
+	}
+
+	//=================================================================================================================
+	// Magnus RP Radius
+	//=================================================================================================================
+	"item_aghsfort_magnataur_reverse_polarity_flat_radius"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"aghsfort_magnataur_reverse_polarity_flat_radius"
+		"ScriptFile"					"items/item_small_scepter_fragment"
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"ItemKillable"					"0"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemKillable"					"0"
+		"ItemCastOnPickup"				"0"
+
+		"CustomShop"					"1"
+		"RequiresCustomShop"			"1"
+		"RequiredCustomShopName"		"boss_shop"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"999999.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "value" "120"
+        }
+	}
+}

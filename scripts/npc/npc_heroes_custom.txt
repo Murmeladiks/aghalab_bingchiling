@@ -1,0 +1,235 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+
+"DOTAHeroes"
+{
+		//=================================================================================================================
+	    "npc_dota_hero_snapfire_aghsfort"
+    {
+        
+        "override_hero" "npc_dota_hero_snapfire"
+        "Ability1"      "aghsfort_snapfire_scatterblast"
+
+
+        "VisionDaytimeRange"        "1100"
+        "VisionNighttimeRange"      "800"
+    }
+     
+       "npc_dota_hero_phantom_assassin_aghsfort"
+    {
+        
+        "override_hero" "npc_dota_hero_phantom_assassin"
+        "Ability1"      "aghsfort_phantom_assassin_stifling_dagger_lua"
+       
+
+        "VisionDaytimeRange"        "1100"
+        "VisionNighttimeRange"      "800"
+    }
+      "npc_dota_hero_alchemist" 
+     
+      {
+        
+        "override_hero" "npc_dota_hero_alchemist"
+       "Ability1"       "aghsfort_alchemist_acid_spray"
+        
+        "Ability3"      "aghsfort_alchemist_corrosive_weaponry"
+        "Ability5"      "alchemist_the_buffett"
+        "Ability6"      "aghsfort_alchemist_chemical_rage"
+        "Ability8"      "alchemist_goblins_greed"
+    }
+     "npc_dota_hero_mars" 
+     
+      {
+        
+        "override_hero" "npc_dota_hero_mars"
+        "Ability1"      "aghsfort_mars_spear"
+        "Ability2"      "aghsfort_mars_gods_rebuke"
+        "Ability3"      "aghsfort_mars_bulwark"
+        "Ability6"      "aghsfort_mars_arena_of_blood"
+    }
+     
+      "npc_dota_hero_undying"
+     
+      {
+        
+        "override_hero" "npc_dota_hero_undying"
+        "Ability4"      "aghsfort_special_undying_consume_zombies_dummy"
+             
+    }
+     
+     
+     
+      "npc_dota_hero_bounty_hunter_aghsfort"
+    {
+        "override_hero"     "npc_dota_hero_bounty_hunter"
+        "Ability1"      "aghsfort_bounty_hunter_shuriken_toss"
+        "Ability2"      "aghsfort_bounty_hunter_jinada"
+        "Ability3"      "aghsfort_bounty_hunter_wind_walk"
+        "Ability4"      "aghsfort_bounty_hunter_loan"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "aghsfort_bounty_hunter_track"
+        "Ability10"     "special_bonus_unique_aghsfort_bounty_hunter_wind_walk+slow"
+        "Ability11"     "special_bonus_unique_aghsfort_bounty_hunter_jinada+damage"
+        "Ability12"     "special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+damage"
+        "Ability13"     "special_bonus_unique_aghsfort_bounty_hunter_track+ally"
+        "Ability14"     "special_bonus_unique_aghsfort_bounty_hunter_track+vison"
+        "Ability15"     "special_bonus_unique_aghsfort_bounty_hunter_jinada+gold"
+        "Ability16"     "special_bonus_unique_aghsfort_bounty_hunter_shuriken_toss+charge"
+        "Ability17"     "special_bonus_unique_aghsfort_bounty_hunter_track+gold"
+        "ArmorPhysical"     "5"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     "npc_dota_hero_crystal_maiden_aghsfort"
+    {
+        "override_hero"     "npc_dota_hero_crystal_maiden"
+        "Ability1"      "aghsfort_rylai_crystal_nova"
+        "Ability2"      "aghsfort_rylai_frostbite"
+        "Ability3"      "aghsfort_rylai_brilliance_aura"
+        "Ability4"      "generic_hidden"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "aghsfort_rylai_freezing_field"
+        // "Ability7"       "aghsfort_rylai_freezing_field_stop"
+        "Ability10"     "special_bonus_hp_200"
+        "Ability11"     "special_bonus_unique_aghsfort_rylai_crystal_nova+radius"
+        "Ability12"     "special_bonus_unique_aghsfort_rylai_brilliance_aura+mr"
+        "Ability13"     "special_bonus_unique_aghsfort_rylai_crystal_nova-cd"
+        "Ability14"     "special_bonus_attack_speed_200"
+        "Ability15"     "special_bonus_unique_aghsfort_rylai_freezing_field+damage"
+        "Ability16"     "special_bonus_unique_aghsfort_rylai_crystal_nova+damage"
+        "Ability17"     "special_bonus_unique_aghsfort_rylai_frostbite+duration"
+        "ArmorPhysical"     "1"
+        "MovementSpeed"     "285"
+    }
+    
+    
+    
+    
+    
+    
+    
+    "npc_dota_hero_spirit_breaker_aghsfort"
+    {
+        "override_hero"     "npc_dota_hero_spirit_breaker"
+        "Ability1"      "aghsfort_spirit_breaker_charge_of_darkness"
+        "Ability2"      "aghsfort_spirit_breaker_bulldoze"
+        "Ability3"      "aghsfort_spirit_breaker_greater_bash"
+        "Ability4"      "generic_hidden"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "aghsfort_spirit_breaker_nether_strike"
+        "Ability10"     "special_bonus_night_vision_500"
+        "Ability11"     "special_bonus_armor_4"
+        "Ability12"     "special_bonus_hp_regen_10"
+        "Ability13"     "special_bonus_attack_damage_40"
+        "Ability14"     "special_bonus_unique_spirit_breaker_greater_bash+damage"
+        "Ability15"     "special_bonus_unique_spirit_breaker_bulldoze-cd"
+        "Ability16"     "special_bonus_unique_spirit_breaker_greater_bash+chance"
+        "Ability17"     "special_bonus_hp_800"
+        "ArmorPhysical"     "3.000000"
+    }
+    
+    
+    	 "npc_dota_hero_nevermore_aghsfort"
+    {
+        "override_hero"     "npc_dota_hero_nevermore"
+        "Ability1"      "aghsfort_nevermore_shadowraze1"
+        "Ability2"      "aghsfort_nevermore_shadowraze2"
+        "Ability3"      "aghsfort_nevermore_shadowraze3"
+        "Ability4"      "aghsfort_nevermore_necromastery"
+        "Ability5"      "aghsfort_nevermore_dark_lord"
+        "Ability6"      "aghsfort_nevermore_requiem"
+        "Ability10"     "special_bonus_unique_aghsfort_nevermore_necromastery+amp"
+        "Ability11"     "special_bonus_attack_speed_20"
+        "Ability12"     "special_bonus_attack_range_125"
+        "Ability13"     "special_bonus_movement_speed_25"
+        "Ability14"     "special_bonus_unique_aghsfort_nevermore_necromastery+atk"
+        "Ability15"     "special_bonus_unique_aghsfort_nevermore_shadowraze+damage"
+        "Ability16"     "special_bonus_unique_aghsfort_nevermore_dark_lord-armor"
+        "Ability17"     "special_bonus_unique_aghsfort_nevermore_requiem-cd"
+    } 
+	
+	 "npc_dota_hero_storm_spirit_aghsfort"
+    {
+        "override_hero"     "npc_dota_hero_storm_spirit"
+        "Ability1"      "aghsfort_storm_spirit_static_remnant"
+        "Ability2"      "aghsfort_storm_spirit_electric_vortex"
+        "Ability3"      "aghsfort_storm_spirit_overload"
+        "Ability4"      "generic_hidden"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "aghsfort_storm_spirit_ball_lightning"
+        "Ability7"      "storm_spirit_galvanized"
+
+        "Ability10"     "special_bonus_unique_storm_spirit_overload_aspd"
+        "Ability11"     "special_bonus_mp_regen_250"
+        "Ability12"     "special_bonus_hp_250"
+        "Ability13"     "special_bonus_unique_storm_spirit_5"
+        "Ability14"     "special_bonus_unique_storm_spirit"
+        "Ability15"     "special_bonus_unique_storm_spirit_8"
+        "Ability16"     "special_bonus_unique_storm_spirit_7"
+        "Ability17"     "special_bonus_unique_storm_spirit_4"
+        "ArmorPhysical"     "3"
+        "MovementSpeed"     "285"
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	 "npc_dota_hero_juggernaut_aghsfort"
+    {
+        "override_hero"         "npc_dota_hero_juggernaut"
+        //"Ability1"              "aghsfort_juggernaut_blade_fury"
+        //"Ability2"              "aghsfort_juggernaut_healing_ward"
+        //"Ability3"              "aghsfort_juggernaut_blade_dance" 
+		//"Ability5"              "juggernaut_duelist"    
+        //"Ability6"              "aghsfort_juggernaut_omni_slash"
+		
+		"Ability10"     "special_bonus_unique_juggernaut_5"
+        "Ability11"     "special_bonus_unique_juggernaut_3"
+        "Ability12"     "special_bonus_strength_20"
+        "Ability13"      "special_bonus_movement_speed_20"
+         "Ability14"     "special_bonus_armor_8"
+        "Ability15"     "special_bonus_unique_juggernaut_blade_fury_cooldown"
+        "Ability16"     "special_bonus_unique_juggernaut_omnislash_duration"
+		"Ability17"     "special_bonus_attack_speed_60"
+       
+    }
+
+	
+	
+	//=================================================================================================================
+	// HERO: Magnus
+	//=================================================================================================================
+	"npc_dota_hero_magnataur_aghsfort"
+	{
+		
+		"override_hero"			"npc_dota_hero_magnataur"
+
+		"Ability1"		"magnataur_pf_shockwave"
+		"Ability2"		"magnataur_pf_empower"
+		"Ability3"		"magnataur_pf_skewer"
+		"Ability4"      "magnataur_solid_core"
+		"Ability5"		"magnataur_pf_reverse_polarity_polarity"
+		"Ability6"		"magnataur_pf_reverse_polarity"
+	//"Ability11"		"special_bonus_mp_200"
+		//"Ability12"		"special_bonus_strength_8"
+	}
+
+	
+}
