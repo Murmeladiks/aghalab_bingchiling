@@ -1,0 +1,18 @@
+
+
+//Model errors
+
+// \models\architecture
+// \models\architecture\forest
+// \models\architecture\prison
+// \models\creeps
+// \models\gameplay
+// yleiset vmat / vmat_c depedencies
+
+
+// Hero
+//
+// Wd unplayable vain 3 shardia
+
+// Buggers
+// Duplicate shardit 
