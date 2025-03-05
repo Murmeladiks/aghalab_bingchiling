@@ -24,6 +24,7 @@ Witch_Doctor only has 3 playable shards
   Failed loading resource "materials/particle/particle_ring_blurry_generic_projected.vmat_c" (ERROR_FILEOPEN: File not found)
   Failed loading resource "soundevents/game_sounds_heroes/game_sounds_crystal_maiden.vsndevts_c" (ERROR_FILEOPEN: File not found)
   Failed loading resource "panorama/images/items/dota_base_ability_png.vtex_c" (ERROR_FILEOPEN: File not found)
+  Failed loading resource "materials/models/gameplay/panorama.vmat_c" (ERROR_BADREQUEST: Code error - bad request)
   ```
   *Description*: Missing resources, including particle effects, sounds, and textures, may affect the game’s visual or audio experience.
 
