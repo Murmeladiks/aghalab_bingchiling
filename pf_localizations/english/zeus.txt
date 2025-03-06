@@ -1,0 +1,188 @@
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-ZEUS START-----------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+
+>---------------------------------------
+>--- LEGENDARY -------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_multi_enemy_bounce"	                "Leyden Jar"
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_multi_enemy_bounce_Description"	    "Arc Lightning can now bounce to enemies already hit by this cast, and has a %lightning_bolt_chance%%% chance to cast Lightning Bolt on the target on every bounce."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_ally_bounce_buff"	                "Electromania"
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_ally_bounce_buff_Description"	    "Arc Lightning can now bounce onto Zeus and his allies, granting them the ability to cast Arc Lightning on a random target within Arc Lightning's cast range whenever they cast a spell for %duration% seconds. The buff expires when the effect procs and Electromania's Arc Lightnings cannot bounce onto allies."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_projectile"	                        "Disco Rave"
+"DOTA_Tooltip_Ability_pathfinder_zuus_arc_lightning_projectile_Description"	            "Arc Lightning now launches a linear projectile that travels %projectile_max_distance% units and casts Arc Lightning every 1.5 seconds to enemies within %trigger_radius% radius of it."
+
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_kill_recast"	"Hell's Bells"
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_kill_recast_Description"	"If Lightning Bolt successfully kills a unit, it will be recast at %recast_damage_modifier%%% damage upon a nearby unit with the lowest health within %radius% units. This process can repeat itself."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_self_cast"		"Lightning in a Bottle"
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_self_cast_Description"	"Lightning Bolt can now be self-cast, healing Zeus for %percent_heal%%% of his maximum health, damaging and knocking back enemies within a %effect_radius% radius of him, and stunning them for %stun_duration% seconds."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_linear_cast"	"Highway to Heaven"
+"DOTA_Tooltip_Ability_pathfinder_zuus_lightning_bolt_linear_cast_Description"	"Lightning Bolt is now a directional ability that casts Lightning Bolts away from Zeus, starting from Zeus' position. Lightning Bolts strike %distance_interval% units apart every %bolt_interval% seconds, up to a maximum distance equal to %max_distance_cast_range_multiplier%x Zeus' usual cast range with Lightning Bolt."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_cloud"	            "Skyfall"
+"DOTA_Tooltip_Ability_pathfinder_zuus_cloud_Description"	"Grants an active ability which lets Zeus summon a storm cloud that duplicates his spell casts upon enemies within its radius. If Zeus' target is not within its radius, it will cast the ability onto the nearest valid target with its radius."
+
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_static_field_attack_arc_lightning"	"Dirty Deeds Done Dirt Cheap"
+"DOTA_Tooltip_Ability_pathfinder_zuus_static_field_attack_arc_lightning_Description"	"Zeus' basic attacks deal %static_field_damage%%% of Static Field's bonus damage. If Zeus attacks the same target %attack_stack_limit% times, he will immediately cast Arc Lightning on that target for free."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_heavenly_jump"	"Zeus From Above"
+"DOTA_Tooltip_Ability_pathfinder_zuus_heavenly_jump_Description"	"Grants an active ability which lets Zeus perform a Heavenly Jump, leaping up to %hop_distance% units in any direction! After landing, Zeus strikes the closest %max_enemy_strike_count% enemies within a %strike_radius% radius with a Lightning Bolt. If there are not enough enemies nearby, Zeus will self-cast Lightning Bolt."
+
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_autosmite"	"You've Been Thunderstruck!"
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_autosmite_Description"	"Thundergod's Wrath can now be auto-cast, giving Zeus a %proc_chance%%% chance every second to smite a random visible enemy for %smite_damage_modifier%%% of Thundergod's Wrath's damage. Each smite costs %max_mana_smite_cost_pct%%% of Zeus' maximum mana."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_multistrike"	"Celestial Tantrum"
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_multistrike_Description" "Thundergod's Wrath always strikes at least %strikes_minimum% units in total. If Thundergod's Wrath strikes at least 1, but less than %strikes_minimum% targets, Thundergod's Wrath will be recast every %recast_delay% seconds until it hits its minimum targets or it doesn't hit any enemy. Each round of strikes will deal %subsequent_strike_damage_multiplier%%% of the previous strike's damage."
+
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_ground_target"	"Electric Rainfall"
+"DOTA_Tooltip_Ability_pathfinder_zuus_thundergods_wrath_ground_target_Description"	"Thundergod's Wrath is now a ground-targeted ability with %wrath_cast_range% base cast range. If Thundergod's Wrath strikes at least %minimum_unit_recast% units, another Thundergod's Wrath is recast %recast_delay% seconds later with %wrath_radius_multiplier%%% of the radius of the previous cast. This can repeat itself."
+
+>---------------------------------------
+>--- ABILITY ---------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf"	"Arc Lightning"
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_Description"	"Hurls a bolt of lightning that leaps through nearby enemy units."
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_Lore"			"Arc Lightning is Zeus' favorite spell to use against puny mortals."
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_arc_damage"		"Damage:"
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_radius"	"Bounce Distance:"
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_jump_delay"	"Bounce Interval:"
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_jump_count"	"Number of Bounces:"
+"DOTA_Tooltip_Ability_zuus_arc_lightning_pf_cast_range"	"Cast Range:"
+
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf"	"Lightning Bolt"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_Description"	"Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a %true_sight_radius% radius. Can be cast on the ground, affecting the closest enemy unit in %spread_aoe% range."
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_Lore"	"A shocking punishment for rebellious heathen."
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_damage"	"Damage:"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_true_sight_radius"	"Vision Radius:"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_sight_duration" "Vision Duration:"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_stun_duration" "Stun Duration:"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_spread_aoe" "Unit Search Radius:"
+"DOTA_Tooltip_Ability_zuus_lightning_bolt_pf_cast_range" "Cast Range:"
+
+"DOTA_Tooltip_Ability_zuus_static_field_pf"	"Static Field"
+"DOTA_Tooltip_Ability_zuus_static_field_pf_Description"	"Zeus shocks any enemy hit by his abilities, causing damage based on a percent of his Intelligence. When activated, Zeus gains bonus intelligence based on a percentage of his current Intelligence."
+"DOTA_Tooltip_Ability_zuus_static_field_pf_Lore"	"The air crackles with static when the Thundergod walks the world."
+"DOTA_Tooltip_Ability_zuus_static_field_pf_damage_pct_of_int"	"%Intelligence to Extra Magic Damage:"
+"DOTA_Tooltip_Ability_zuus_static_field_pf_active_int_boost_pct"	"%Active Extra Intelligence:"
+"DOTA_Tooltip_Ability_zuus_static_field_pf_active_duration"	"Active Duration:"
+
+"DOTA_Tooltip_Ability_zuus_cloud_pf"	"Nimbus"
+"DOTA_Tooltip_Ability_zuus_cloud_pf_Description"	"Summons a storm cloud anywhere that recasts Zeus' spells onto his targets if within its range or onto a random nearby target within its radius."
+"DOTA_Tooltip_Ability_zuus_cloud_pf_Lore"	"Where the thunder god's ire grows, storm clouds quickly gather."
+"DOTA_Tooltip_Ability_zuus_cloud_pf_cloud_radius"	"Radius: "
+"DOTA_Tooltip_Ability_zuus_cloud_pf_cloud_duration"	"Duration:"
+"DOTA_Tooltip_Ability_zuus_cloud_pf_cloud_arc_interval"	"Arc Lightning Interval:"
+"DOTA_Tooltip_Ability_zuus_cloud_pf_cloud_bolt_interval"	"Lightning Bolt Interval:"
+"DOTA_Tooltip_Ability_zuus_cloud_pf_hits_to_kill"	"Hits to Kill:"
+
+"DOTA_Tooltip_Ability_zuus_heavenly_jump_pf"	"Heavenly Jump"
+"DOTA_Tooltip_Ability_zuus_heavenly_jump_pf_Description"	"Perform a glorious leap towards a chosen destination. If Zeus lands within %strike_radius% of enemies, Lightning Bolts will fall from the sky, striking up to %max_enemy_strike_count% enemies. If there are not enough enemies nearby, Zeus will self-cast Lightning Bolt."
+"DOTA_Tooltip_Ability_zuus_heavenly_jump_pf_Lore"	"Many bloodlines trace back to Zeus, including a famous pair of Italian plumbers."
+"DOTA_Tooltip_Ability_zuus_heavenly_jump_pf_hop_height"	"Leap Distance:"
+
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf"	"Thundergod's Wrath"
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_Description"	"Strikes all enemy units with a bolt of lightning within a %radius% radius of Zeus. Thundergod's Wrath also provides True Sight around each unit struck. If an enemy unit is invisible, it takes no damage, but the True Sight is still created at that unit's location."
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_Lore"	"The Lord of Heaven smites all who oppose him, near or far."
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_damage"	"Damage:"
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_radius"	"Radius:"
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_true_sight_radius"	"Vision Radius:"
+"DOTA_Tooltip_Ability_zuus_thundergods_wrath_pf_sight_duration"	"Vision Duration"
+
+>---------------------------------------
+>--- MINOR SHARD -----------------------
+>---------------------------------------
+
+"zuus_arc_lightning_pf_damage"		"+{s:value} {s:ability_name} Damage"
+"zuus_arc_lightning_pf_bounce"		"+{s:value} {s:ability_name} Bounces"
+"zuus_arc_lightning_pf_cooldown"	"-{s:value}% {s:ability_name} Cooldown"
+
+"zuus_lightning_bolt_pf_damage"		"+{s:value} {s:ability_name} Damage"
+"zuus_lightning_bolt_pf_stun_duration"	"+{s:value}s {s:ability_name} Stun Duration"
+"zuus_lightning_bolt_pf_cooldown"	"-{s:value}% {s:ability_name} Cooldown"
+"zuus_lightning_bolt_pf_cast_range"	"+{s:value} {s:ability_name} Cast Range"
+
+"zuus_static_field_pf_damage"			"+{s:value}% {s:ability_name} Intelligence to Bonus Damage"
+"zuus_static_field_pf_active_pct_increase"	"+{s:value}% {s:ability_name} Intelligence Gain"
+"zuus_static_field_pf_active_duration"	"+{s:value}s {s:ability_name} Duration"
+"zuus_static_field_pf_cooldown"	"-{s:value}% {s:ability_name} Cooldown"
+
+"zuus_thundergods_wrath_pf_damage"	"+{s:value} {s:ability_name} Damage"
+"zuus_thundergods_wrath_pf_radius"	"+{s:value} {s:ability_name} Radius"
+"zuus_thundergods_wrath_pf_cooldown"	"-{s:value}% {s:ability_name} Cooldown"
+
+>---------------------------------------
+>--- BRISTLE SHARD ---------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_damage"		                    "Arc Lightning: Damage"
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_damage_Description"			    "<h1>Common Scepter Fragment</h1>Increases Arc Lightning Damage by %value%."
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_bounce"		                    "Arc Lightning: Number of Bounces"
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_bounce_Description"			    "<h1>Common Scepter Fragment</h1>Increases Arc Lightning Number of Bounces by %value%."
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_cooldown"		                    "Arc Lightning: Cooldown"
+"DOTA_Tooltip_Ability_item_zuus_arc_lightning_pf_cooldown_Description"			    "<h1>Common Scepter Fragment</h1>Decreases Arc Lightning Cooldown by %value%%%."
+
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_damage"		                    "Lightning Bolt: Damage"
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_damage_Description"			    "<h1>Common Scepter Fragment</h1>Increases Lightning Bolt Damage by %value%."
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_stun_duration"		            "Lightning Bolt: Stun Duration"
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_stun_duration_Description"		"<h1>Common Scepter Fragment</h1>Increases Lightning Bolt Stun Duration by %value% seconds."
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_cooldown"		                    "Lightning Bolt: Cooldown"
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_cooldown_Description"			    "<h1>Common Scepter Fragment</h1>Decreases Lightning Bolt Cooldown by %value%%%."
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_cast_range"		                "Lightning Bolt: Cast Range"
+"DOTA_Tooltip_Ability_item_zuus_lightning_bolt_pf_cast_range_Description"			"<h1>Common Scepter Fragment</h1>Increases Lightning Bolt Cast Range by %value%."
+
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_damage"		                    	"Static Field: Damage by Intelligence"
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_damage_Description"			    	"<h1>Common Scepter Fragment</h1>Increases Static Field Damage by Intelligence by %value%%%."
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_active_pct_increase"		        "Static Field: Intelligence Increase"
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_active_pct_increase_Description"	"<h1>Common Scepter Fragment</h1>Increases Static Field Intelligence Increase by %value%%%."
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_active_duration"		            "Static Field: Active Duration"
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_active_duration_Description"		"<h1>Common Scepter Fragment</h1>Increases Static Field Active Duration by %value% seconds."
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_cooldown"		                    "Static Field: Cooldown"
+"DOTA_Tooltip_Ability_item_zuus_static_field_pf_cooldown_Description"			    "<h1>Common Scepter Fragment</h1>Decreases Static Field Cooldown by %value%%%."
+
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_damage"		                "Thundergod's Wrath: Damage"
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_damage_Description"			"<h1>Common Scepter Fragment</h1>Increases Thundergod's Wrath Damage by %value%."
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_radius"		                "Thundergod's Wrath: Radius"
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_radius_Description"			"<h1>Common Scepter Fragment</h1>Increases Thundergod's Wrath Radius by %value%."
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_cooldown"		            	"Thundergod's Wrath: Cooldown"
+"DOTA_Tooltip_Ability_item_zuus_thundergods_wrath_pf_cooldown_Description"			"<h1>Common Scepter Fragment</h1>Decreases Thundergod's Wrath Cooldown by %value%%%."
+
+>---------------------------------------
+>--- TALENT TREE -----------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_arc_lightning_ministun"		"{s:value}s Arc Lightning Ministun"
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_autoattack_cooldowns"			"-{s:value}% Ability Cooldowns on Every Attack"
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_static_field_damage_increase"	"+{s:value}% Static Field Damage Multiplier"
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_thundergods_wrath_cooldown"	"{s:value} Thundergod's Wrath Cooldown"
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_non_ult_spell_immunity_pierce"	"Non-Ultimate abilities pierce Spell Immunity"
+"DOTA_Tooltip_Ability_special_unique_pathfinder_zuus_ult_spell_immunity"	"{s:value}s Spell Immunity from casting Thundergod's Wrath"
+
+>---------------------------------------
+>--- MODIFIER --------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_modifier_zuus_arc_lightning_pf_ally_buff"	"Electromania"
+"DOTA_Tooltip_modifier_zuus_arc_lightning_pf_ally_buff_Description"	"Your spells are imbued with the chance to cast Arc Lightning!"
+
+"DOTA_Tooltip_modifier_zuus_static_field_pf_attacking_debuff"	"Dirty Deeds Done Dirt Cheap"
+"DOTA_Tooltip_modifier_zuus_static_field_pf_attacking_debuff_Description"	"Getting enough attacks from Zeus will cause Zeus to freely cast Arc Lightning on this unit."
+
+"DOTA_Tooltip_modifier_zuus_static_field_pf_active"		"Static Field Active"
+"DOTA_Tooltip_modifier_zuus_static_field_pf_active_Description"	"Zeus' powers have been elevated!"
+
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-ZEUS END-------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------

@@ -227,7 +227,7 @@ function CAghanim:InitGameMode()
     --seems like for hero pick
     GameRules:SetEnableAlternateHeroGrids( false )
 
-    GameRules:SetCustomGameSetupTimeout( 31 )
+    GameRules:SetCustomGameSetupTimeout( 61 )
     GameRules:SetCustomGameSetupAutoLaunchDelay( 0 )
     GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 4 )
     GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
@@ -236,7 +236,7 @@ function CAghanim:InitGameMode()
     GameRules:SetShowcaseTime( 0.0 )
     GameRules:SetPreGameTime( 2.0 )
     GameRules:SetPostGameTime( 45.0 )
-    GameRules:SetHeroSelectionTime( 90 )
+    GameRules:SetHeroSelectionTime( 120 )
     GameRules:SetTreeRegrowTime( 60.0 )
     GameRules:SetStartingGold( AGHANIM_STARTING_GOLD )
     -- we have to give them money even it has been set

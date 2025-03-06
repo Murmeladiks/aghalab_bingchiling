@@ -571,7 +571,7 @@ _G.STAT_UPGRADE_EXCLUDES =
    npc_dota_hero_techies  ={},  
 
    npc_dota_hero_terrorblade  ={},  
-   npc_dota_hero_tidehunter  ={},  
+   npc_dota_hero_tidehunter  ={"aghsfort_minor_stat_upgrade_bonus_evasion"},  
    npc_dota_hero_tinker  ={},  
    npc_dota_hero_tiny  ={},  
    npc_dota_hero_treant  ={},  
@@ -705,7 +705,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    -- npc_dota_hero_sven  ="",  
    -- npc_dota_hero_techies  ="",  
    -- npc_dota_hero_terrorblade  ="",  
-   -- npc_dota_hero_tidehunter  ="",  
+    npc_dota_hero_tidehunter  ="tidehunter_ravage",  
    -- npc_dota_hero_tinker  ="",  
    -- npc_dota_hero_tiny  ="",  
    -- npc_dota_hero_treant  ="",  
@@ -1175,9 +1175,25 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_kez"] ={
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_terrorblade"] ={
    "empty_undefined_ability"
 }  
-     SPECIAL_ABILITY_UPGRADES["npc_dota_hero_tidehunter"] ={
-   "empty_undefined_ability"
-}  
+     SPECIAL_ABILITY_UPGRADES["npc_dota_hero_tidehunter"] =
+{
+	
+	"tidehunter_gush_pf_ravage",   
+	"tidehunter_gush_pf_bounce",
+	"tidehunter_kraken_shell_pf_gush",
+	"tidehunter_kraken_shell_pf_ravage_cdr",
+	"tidehunter_anchor_smash_pf_allies",
+	"tidehunter_ravage_pf_puddle",
+	"tidehunter_anchor_smash_pf_karate",
+	"tidehunter_pf_crunch",
+	"tidehunter_anchor_smash_pf_whack",
+	"tidehunter_kraken_shell_pf_heal",
+	"tidehunter_gush_pf_miss",
+	
+	--"aghsfort_special_templar_assassin_refraction_allies",
+	--"aghsfort_special_templar_assassin_refraction_counter_attack",
+	--"aghsfort_special_templar_assassin_psi_blades_autoattack",
+}
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_tinker"] ={
    "empty_undefined_ability"
 }  
@@ -1296,6 +1312,21 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_disruptor"] =
 }
 
 SPECIAL_ABILITY_UPGRADES["npc_dota_hero_snapfire"] =
+{
+   
+   "snapfire_scatterblast_sawed_off",
+   "snapfire_scatterblast_double_barreled",
+   "snapfire_scatterblast_stopping_power",
+   "special_bonus_unique_snapfire_firesnap_cookie_enemy",
+   "snapfire_firesnap_cookie_bakers_dozen",
+   "snapfire_firesnap_cookie_freshly_baked",
+   "snapfire_lil_shredder_explosive_shells",
+   "snapfire_lil_shredder_allies",
+   --"special_bonus_unique_snapfire_lil_shredder_gunner"
+
+}
+
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_"] =
 {
    
    "snapfire_scatterblast_sawed_off",
@@ -1932,4 +1963,4 @@ PURCHASABLE_SHARDS[ "npc_dota_hero_void_spirit" ] =
    "item_aghsfort_void_spirit_astral_step_max_travel_distance",
    "item_aghsfort_void_spirit_astral_step_charge_restore_time",
 }
-
+require("heroes/tidehunter/aghanim_ability_upgrade_tidehunter")

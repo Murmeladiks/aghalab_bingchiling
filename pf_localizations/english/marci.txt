@@ -1,0 +1,241 @@
+
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-MARCI START------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+>---------------------------------------
+>--- LEGENDARY -------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_throw"	                                                        "Onward Unto The Breach"
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_throw_Description"	                                            "Dispose now allows Marci to throw the targeted unit unto any pathable location within a %max_throw_distance% radius. Allies thrown are buffed with Rebound's speed bonus upon landing."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_mass"	                                                        "Cuddlemania"
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_mass_Description"	                                            "Dispose now targets all units of the same team as the target in a %radius% radius around them. If the target is an enemy, Marci gains %cleave%%% cleave for the next %cleave_attacks% attacks."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_stun"	                                                        "A Stunning Disposition"
+"DOTA_Tooltip_Ability_pathfinder_marci_grapple_stun_Description"	                                            "The primary target of Dispose is stunned by an additional %bonus_stun% seconds for each unit it lands on. While attacking enemies stunned by Dispose, Marci is buffed with the current level of Unleash. Unleash stacks are granted when Marci begins attacking a qualified target, and are removed when a non-attack command is issued, or if Marci begins attacking an unqualified target."
+
+
+
+
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_unleash"	                                                 "Fluff From Above"
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_unleash_Description"	                                     "Upon landing from Rebound, Marci is granted a single sequence of Unleash attacks. If the target Marci leaps off is an ally, both Marci and her target will be buffed with the current level of Sidekick."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_leap"	                                                        "I'm Walking Here"
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_leap_Description"	                                "When Rebound is self-cast, Marci will repeatedly leap unto nearby enemies and attack them instead of immediately landing. Each leap stuns for %stun_duration% second while also releasing an Unleash pulse. Rebound can be recast at any time to immediately land."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_global"	                                                        "Ain't No Mountain High Nor Valley Low"
+"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_global_Description"	                                            "Rebound gains global cast range, and %bonus_leap_distance% bonus leap distance. Upon leaping, Marci disposes the target along with her to the destination. Upon landing, Marci and any allied passenger heal for %heal_percent%%% of their max health."
+
+
+
+
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_permanent"	                                                        "Unyelding Loyalty"
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_permanent_Description"	                                            "Sidekick's buff remains permanently active, but its damage and healing are reduced by half. When cast, Sidekick applies a strong dispel unto the target, while also silencing and disarming all nearby enemies."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_enemy"	                                                        "Hushed Retribution"
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_enemy_Description"	                                            "Sidekick can be cast on an enemy. Every 6 seconds, that unit releases a massive pulse, healing all friendly heroes for %damage_to_heal_perc%%% of all damage it dealt during the past 6 seconds period, while damaging all other enemies for the same amount."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_kick"	                                                        "One Too Many"
+"DOTA_Tooltip_Ability_pathfinder_marci_guardian_kick_Description"	                                            "Casting Sidekick causes the target to perform a roundhouse kick, instantly attacking nearby enemies in a %radius% radius. For each %health_percent_per_kick%%% of health missing, the target attacks each enemy 1 additional time."
+
+
+
+
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_passive"	                                                        "Hell Hath No Fury"
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_passive_Description"	                                            "Unleash passively grants Marci a single sequence of Unleash attacks every 5 seconds. This can be reduced with cooldown reduction. While having no Unleash stacks, Marci is disarmed. When Unleash is activated, Marci gains %bonus_attack_range% attack range."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_pulse"	                                                        "Therapeutic Violence"
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_pulse_Description"	                                            "Unleash's final pulse is now triggered on every other Unleash attack. Allies within the pulse radius are healed for half of its damage."
+
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_bash"	                                                        "Wax On"
+"DOTA_Tooltip_Ability_pathfinder_marci_unleash_bash_Description"	                                            "Sidekick now also grants the target a single sequence of Unleash attack. Additionally, Unleash attacks have a %chance%%% chance to bash in a %bash_radius% area for %bash_duration% seconds."
+
+
+>---------------------------------------
+>--- ABILITY ---------------------------
+>---------------------------------------
+
+// Marci
+"DOTA_Tooltip_ability_marci_grapple_pf"							"Dispose"
+"DOTA_Tooltip_ability_marci_grapple_pf_Description"				"Marci grabs an allied or enemy target and throws it effortlessly behind her, damaging and stunning the unit if it's an enemy. Any enemy units in the landing area will also be damaged and stunned."
+"DOTA_Tooltip_ability_marci_grapple_pf_Lore"				"Marci excels at removing obstacles from Princess Mirana's path."
+"DOTA_Tooltip_ability_marci_grapple_pf_throw_distance_behind"		"THROW DISTANCE:"
+"DOTA_Tooltip_ability_marci_grapple_pf_stun_duration"				"STUN DURATION:"
+"DOTA_Tooltip_ability_marci_grapple_pf_impact_damage"				"IMPACT DAMAGE:"
+"DOTA_Tooltip_ability_marci_grapple_pf_landing_radius"				"LANDING RADIUS:"
+
+"DOTA_Tooltip_ability_marci_unleash_lua"						"Unleash"
+"DOTA_Tooltip_ability_marci_unleash_lua_Description"			"Marci taps a hidden power, gaining Fury charges that allow her to deliver a rapid sequence of strikes. The last strike in every Fury combo creates a damaging pulse around the target that slows movement and attack speed for %pulse_debuff_duration%s. In between Fury combos, Marci is unable to attack for %time_between_flurries%s.\n\nMarci receives a basic dispel when Unleash is cast and gains %bonus_movespeed%%% movement speed."
+"DOTA_Tooltip_ability_marci_unleash_lua_Note0"					"Once a Fury combo is started, each attack must be delivered within 1s or the Fury combo expires."
+"DOTA_Tooltip_ability_marci_unleash_lua_Lore"					"Though some have sought to understand its origins, Marci rebuffs all attempts to divine the source of her power."
+"DOTA_Tooltip_ability_marci_unleash_lua_duration"				"DURATION:"
+"DOTA_Tooltip_ability_marci_unleash_lua_charges_per_flurry"		"STRIKES PER FURY:"
+"DOTA_Tooltip_ability_marci_unleash_lua_pulse_radius"			"PULSE RADIUS:"
+"DOTA_Tooltip_ability_marci_unleash_lua_pulse_damage"			"PULSE DAMAGE:"
+"DOTA_Tooltip_ability_marci_unleash_lua_pulse_move_slow_pct"	"%PULSE MOVEMENT SLOW:"
+"DOTA_Tooltip_ability_marci_unleash_lua_pulse_attack_slow_pct"	"PULSE ATTACK SLOW:"
+
+"DOTA_Tooltip_modifier_marci_unleash_lua"						"Unleash"
+"DOTA_Tooltip_modifier_marci_unleash_lua_Description"			"Gains attack Fury combos."
+
+"DOTA_Tooltip_modifier_pathfinder_marci_unleash_passive"						"Unleash Passive Shard"
+"DOTA_Tooltip_modifier_pathfinder_marci_unleash_passive_Description"			"Gains Fury combos every %fMODIFIER_PROPERTY_TOOLTIP% seconds."
+
+"DOTA_Tooltip_modifier_marci_unleash_lua_fury"				"Unleash - Fury"
+"DOTA_Tooltip_modifier_marci_unleash_lua_fury_Description"	"This unit has greatly increased attack speed."
+
+"DOTA_Tooltip_modifier_marci_unleash_lua_recovery"				"Unleash - Fury Cooldown"
+"DOTA_Tooltip_modifier_marci_unleash_lua_recovery_Description"	"Waiting for the next Fury strikes."
+
+"DOTA_Tooltip_modifier_marci_unleash_flurry_pulse_debuff"				"Unleash - Pulse"
+"DOTA_Tooltip_modifier_marci_unleash_flurry_pulse_debuff_Description"	"This unit has slowed movement and attack speed."
+
+"DOTA_Tooltip_modifier_marci_unleash_pulse_silence"				"Unleash - Pulse Silence"
+"DOTA_Tooltip_modifier_marci_unleash_pulse_silence_Description"	"This unit is silenced."
+
+"DOTA_Tooltip_ability_marci_companion_run_pf"						"Rebound"
+"DOTA_Tooltip_ability_marci_companion_run_pf_Description"			"Vector targeted. Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and slowing enemies in the area.\n\nIf the unit she runs to is an ally, it receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s."
+"DOTA_Tooltip_ability_marci_companion_run_pf_Lore"			"With a friendly or brazen boost, Marci can find her way into the midst of any fight."
+"DOTA_Tooltip_ability_marci_companion_run_pf_Note0"				"Has %min_jump_distance% minimum jump distance."
+"DOTA_Tooltip_ability_marci_companion_run_pf_Note1"				"Marci's initial run to her target unit can be disjointed."
+"DOTA_Tooltip_ability_marci_companion_run_pf_impact_damage"		"IMPACT DAMAGE:"
+"DOTA_Tooltip_ability_marci_companion_run_pf_movement_slow_pct"	"%MOVEMENT SLOW:"
+"DOTA_Tooltip_ability_marci_companion_run_pf_debuff_duration"		"SLOW DURATION:"
+"DOTA_Tooltip_ability_marci_companion_run_pf_max_jump_distance"	"CAST / JUMP RANGE:"
+
+"DOTA_Tooltip_modifier_marci_companion_run_pf_debuff"						"Rebound"
+"DOTA_Tooltip_modifier_marci_companion_run_pf_debuff_Description"			"This unit has slowed movement speed."
+
+"DOTA_Tooltip_modifier_marci_companion_run_pf_buff"				"Rebound"
+"DOTA_Tooltip_modifier_marci_companion_run_pf_buff_Description"	"This unit has bonus movement speed."
+
+"DOTA_Tooltip_modifier_marci_companion_lunge_ally_buff"				"Rebound"	
+"DOTA_Tooltip_modifier_marci_companion_lunge_ally_buff_Description"	"This unit has a protective shield that blocks physical damage."	
+
+"DOTA_Tooltip_ability_marci_guardian_pf"						"Sidekick"
+"DOTA_Tooltip_ability_marci_guardian_pf_Description"			"Marci's loyalty helps ensure survival, imbuing a chosen allied hero and herself with lifesteal and attack damage."
+"DOTA_Tooltip_ability_marci_guardian_pf_Note0"					"Marci can self-cast Sidekick to buff herself and the nearest allied hero within %nearest_ally_search_range% range."
+"DOTA_Tooltip_ability_marci_guardian_pf_Lore"					"Marci learned at a young age that the best asset in a scrap is a steady companion."
+"DOTA_Tooltip_ability_marci_guardian_pf_buff_duration"			"DURATION:"
+"DOTA_Tooltip_ability_marci_guardian_pf_lifesteal_pct"			"%LIFESTEAL:"
+"DOTA_Tooltip_ability_marci_guardian_pf_bonus_damage"			"BONUS DAMAGE:"
+
+"DOTA_Tooltip_modifier_marci_guardian_pf"					"Sidekick"
+"DOTA_Tooltip_modifier_marci_guardian_pf_Description"		"This unit has lifesteal and bonus damage."
+
+"DOTA_Tooltip_modifier_marci_guardian_pf_permanent"					"Sidekick Permanent"
+"DOTA_Tooltip_modifier_marci_guardian_pf_permanent_Description"		"This unit has lifesteal and bonus damage."
+
+"DOTA_Tooltip_modifier_marci_guardian_magic_immunity"				"Sidekick"
+"DOTA_Tooltip_modifier_marci_guardian_magic_immunity_Description"	"This unit is spell immune."
+
+
+>---------------------------------------
+>--- MINOR SHARD -----------------------
+>---------------------------------------
+
+"marci_grapple_pf_stun"			"+{s:value} {s:ability_name} Stun Duration"
+"marci_grapple_pf_damage"		"+{s:value} {s:ability_name} Impact Damage"
+"marci_grapple_pf_radius"		"+{s:value} {s:ability_name} Landing Radius"
+"marci_grapple_pf_cooldown"		"-{s:value}% {s:ability_name} Cooldown"
+
+"marci_companion_run_pf_damage"					"+{s:value} {s:ability_name} Impact Damage"
+"marci_companion_run_pf_jump"					"+{s:value} {s:ability_name} Max Jump Distance"
+"marci_companion_run_pf_debuff_duration"		"+{s:value} seconds {s:ability_name} Debuff Duration"
+"marci_companion_run_pf_cooldown"				"-{s:value}% {s:ability_name} Cooldown"
+
+"marci_guardian_pf_duration"			"+{s:value} seconds {s:ability_name} Buff Duration"
+"marci_guardian_pf_lifesteal"			"+{s:value}% {s:ability_name} Lifesteal"
+"marci_guardian_pf_damage"				"+{s:value} {s:ability_name} Bonus Damage"
+"marci_guardian_pf_cooldown"			"-{s:value}% {s:ability_name} Cooldown"
+
+"marci_unleash_lua_duration"			"+{s:value} seconds {s:ability_name} Duration"
+"marci_unleash_lua_charges"		"+{s:value} {s:ability_name} Strike Per Fury"
+"marci_unleash_lua_flurries_cd"		"{s:value}% {s:ability_name} Cooldown Between Furies"
+"marci_unleash_lua_damage"		"+{s:value} {s:ability_name} Pulse Damage"
+
+
+>---------------------------------------
+>--- BRISTLE SHARD ---------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_stun"		            "Dispose: Stun Duration"
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_stun_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Stun Duration by %value% seconds."
+
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_damage"		            "Dispose: Impact Damage"
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Impact Damage by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_radius"		            "Dispose: Landing Radius"
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_radius_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Landing Radius by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_cooldown"		        "Dispose: Cooldown"
+"DOTA_Tooltip_Ability_item_marci_grapple_pf_cooldown_Description"	"<h1>Common Scepter Fragment</h1>Decreases Dispose Cooldown by %value%%%."
+
+
+
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_damage"		            	"Rebound: Impact Damage"
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_damage_Description"			"<h1>Common Scepter Fragment</h1>Increases Rebound Impact Damage by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_jump"		            		"Rebound: Max Jump Distance"
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_jump_Description"				"<h1>Common Scepter Fragment</h1>Increases Rebound Max Jump Distance by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_debuff_duration"		        "Rebound: Debuff Duration"
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_debuff_duration_Description"	"<h1>Common Scepter Fragment</h1>Increases Rebound Debuff Duration by %value% seconds."
+
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_cooldown"		            	"Rebound: Cooldown"
+"DOTA_Tooltip_Ability_item_marci_companion_run_pf_cooldown_Description"			"<h1>Common Scepter Fragment</h1>Decreases Rebound Cooldown by %value%%%."
+
+
+
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_duration"		            "Sidekick: Duration"
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_Description"				"<h1>Common Scepter Fragment</h1>Increases Sidekick Duration by %value% seconds."
+
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_lifesteal"		            "Sidekick: Lifesteal"
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_lifesteal_Description"		"<h1>Common Scepter Fragment</h1>Increases Sidekick Lifesteal by %value%%%."
+
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_damage"		            "Sidekick: Damage"
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Sidekick Damage by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_cooldown"		            "Sidekick: Cooldown"
+"DOTA_Tooltip_Ability_item_marci_guardian_pf_cooldown_Description"		"<h1>Common Scepter Fragment</h1>Decreases Sidekick Cooldown by %value%%%."
+
+
+
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_duration"		            "Unleash: Duration"
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_duration_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Duration by %value% seconds."
+
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_charges"		            "Unleash: Striker per Fury"
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_charges_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Strikes per Fury by %value%."
+
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_flurries_cd"		        "Unleash: Time between Fury combos"
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_flurries_cd_Description"	"<h1>Common Scepter Fragment</h1>Decreases Unleash Time between Fury combos by %value%%%."
+
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_damage"		            "Unleash: Pulse Damage"
+"DOTA_Tooltip_Ability_item_marci_unleash_lua_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Pulse Damage by %value%."
+
+
+>---------------------------------------
+>--- TALENT TREE -----------------------
+>---------------------------------------
+
+"DOTA_Tooltip_Ability_pathfinder_special_bonus_unique_marci_companion_run_heal" 	"Dispose 40% max health healing"
+
+
+>---------------------------------------
+>--- MODIFIER --------------------------
+>---------------------------------------
+
+
+"npc_dota_hero_marci_full_title"									"MARCI, THE SILENT FRIEND"
+"npc_dota_hero_marci_full_title_intro"								"Through countless planes her loyalty shines of hushed brilliance"
+
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-MARCI END--------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------

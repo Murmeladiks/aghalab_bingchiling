@@ -1,0 +1,186 @@
+
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-MEDUSA START-----------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+>---------------------------------------
+>--- LEGENDARY -------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_snake_oiled_enhancement"					"Snake Oiled Enhancement"
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_snake_oiled_enhancement_Description"		"Each of Medusa's attack projectiles have a %chance%%% pseudo-random chance to instead release the current level of Mystic Snake"
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_bewitched_barrage"						"Bewitched Barrage"
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_bewitched_barrage_Description"			"Medusa passively petrifies any foe that has been hit by her attacks %attacks_to_petrify% times for %petrify_duration% seconds.\nSplitshot can have autocast enabled to direct all secondary arrows to the primary target.\nSecondary arrows deal %active_damage_reduction%%% of their usual damage while this is active."
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_curse_of_endless_torment"				"Curse Of Endless Torment"
+"DOTA_Tooltip_ability_pathfinder_medusa_split_shot_curse_of_endless_torment_Description"	"Enemies killed by medusa have a %spawn_chance%%% chance to spawn a Gorgon Pole. Each gorgon pole will fire a single secondary arrow toward a nearby enemy whenever Medusa attacks, prioritizing Medusa's target. Gorgon poles are destroyed after firing %pole_attacks_count_tooltip% attacks."
+
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_chained_serpents"						"Chained Serpents"
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_chained_serpents_Description"			"Mystic Snake has a %split_chance%%% chance per bounce to split in two, adding an extra bounce to each new snake"
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_petrifying_snake"						"Petrifying Snake"
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_petrifying_snake_Description"			"Mystic snake petrifies enemies on impact, causing Medusa to launch 2 attacks towards the target. The second attack will dispel the petrify debuff."
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_venomotherapy"							"Venomotherapy"
+"DOTA_Tooltip_ability_pathfinder_medusa_mystic_snake_venomotherapy_Description"				"Mystic Snake can now jump to other allies (but not Medusa herself), healing them for %missing_mana_healing%%% of Medusa's missing mana. Upon impact with an ally, Mystic Snake petrifies nearby enemies within a %petrify_radius% radius. Mystic Snake restores twice as much mana when it returns to Medusa."
+
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_magic_negation"							"Mana Reflow"
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_magic_negation_Description"				"While having less than %mana_threshold%%% mana, Stone Gaze recharges %cooldown_speed_increase%%% faster. Medusa also periodically gains a shield that negates magical damage and disarms and damages nearby foes when it expires."
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_stone_form"								"Stone Form"
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_stone_form_Description"					"When falling below %proc_threshold%%% health or mana, Medusa petrifies herself. While in this stone form, she is invulnerable, regenerates %bonus_regen%%% health/mana per second, and launches a mystic snake at the nearest enemy every %snake_interval% seconds. Lasts for up to %base_duration% seconds, and can be ended prematurely. Has a %proc_cooldown% seconds cooldown."
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_mana_dome"								"Mana Dome"
+"DOTA_Tooltip_ability_pathfinder_medusa_mana_shield_mana_dome_Description"					"Creates a Mana Dome, which applies Mana Shield's damage absorption to allies in a 450 radius, expending Medusa's mana when damage is taken by allies within. Medusa herself gains +30%% Mana Shield damage absorption inside the dome, and +20%% mana regen for each friendly hero inside it. Lasts 20 seconds. Only one Mana Dome can exist at a time."
+
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_stone_shatter"							"Fragile Stone"
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_stone_shatter_Description"				"If Medusa herself kills a petrified unit, they have a %shatter_chance%%% chance to shatter, petrifying all enemy units in a %shatter_radius% radius for the same duration. Medusa's basic attacks deal an additional %petrified_damage_bonus%%% max health to petrified non-boss enemies. This bonus damage splashes in a %petrified_damage_radius% radius."
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_split"									"Unlimited Arrowworks"
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_split_Description"						"While Stone Gaze is active medusa gains unlimited splitshot unto all enemies within Stone Gaze's radius. Additionally Medusa gains +%move_speed_bonus% movement speed, +%attack_speed_bonus% attack speed, and the ability to attack while moving"
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_gorgon_eyes"								"Gorgon Eyes"
+"DOTA_Tooltip_ability_pathfinder_medusa_stone_gaze_gorgon_eyes_Description"					"Stone Gaze now applies passively, petrifying enemies that look at Medusa for an accumulated time of %passive_face_duration% seconds. The petrification lasts %passive_stone_duration% seconds. Each unit can only be petrified by this effect once every %passive_stone_cooldown% seconds. When activate, Stone Gaze entrances all nearby enemies, forcing them to look at her. Enemies that are turned to stone remain petrified throughout Stone Gaze's duration."
+
+>---------------------------------------
+>--- ABILITY ---------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_ability_medusa_split_shot_lua"								"Split Shot"
+"DOTA_Tooltip_ability_medusa_split_shot_lua_Description"					"Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.\n\nThe extra targets will not receive other attack effects (such as critical strike)."
+"DOTA_Tooltip_ability_medusa_split_shot_lua_Lore"							"All who encounter the cursed Gorgon will feel her rage."
+"DOTA_Tooltip_ability_medusa_split_shot_lua_Note0"							"Secondary targets will be the closest enemy units excluding the primary target."
+"DOTA_Tooltip_ability_medusa_split_shot_lua_Note1"							"If illusions of Medusa are created while Split Shot is active, they will also have this ability."
+"DOTA_Tooltip_ability_medusa_split_shot_lua_damage_modifier_tooltip"		"%OUTGOING DAMAGE:"
+"DOTA_Tooltip_ability_medusa_split_shot_lua_arrow_count"					"EXTRA TARGETS:"
+"DOTA_Tooltip_ability_medusa_split_shot_lua_split_shot_bonus_range"			"BONUS RANGE:"
+
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua"								"Mystic Snake"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_Description"					"A mystic snake made of energy jumps from target to target dealing damage. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake deals more damage per jump and returns %mana_steal_default%%% (%mana_steal_captain%%% from captains) of Medusa' max mana per target hit."
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_Lore"							"The Gorgon's curse is her greatest strength."
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_Note0"						"Mystic Snake cannot be disjointed."
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_Note1"						"Doesn't remove mana from targets hit."
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_radius"						"JUMP RADIUS:"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_snake_jumps"					"JUMPS:"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_snake_damage"					"DAMAGE:"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_snake_scale"					"%DAMAGE INCREASE PER JUMP:"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_mana_steal_default"			"%MANA GAIN:"
+"DOTA_Tooltip_ability_medusa_mystic_snake_lua_mana_steal_captain"			"%MANA GAIN FROM CAPTAINS:"
+
+"DOTA_Tooltip_ability_medusa_mana_shield_lua"								"Mana Shield"
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_Description"					"Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity."
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_Lore"							"While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers."
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_Note0"							"Absorbs damage before any damage reduction takes place, meaning that armor will not reduce the amount of mana needed to absorb damage."
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_damage_per_mana"				"DAMAGE PER MANA:"
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_absorption_pct"				"%DAMAGE ABSORBED:"
+"DOTA_Tooltip_ability_medusa_mana_shield_lua_bonus_mana"					"BONUS MANA:"
+
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua"								"Stone Gaze"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_Description"					"Any enemy units looking at Medusa will have their movement and attack speed slowed.  If %face_duration% seconds of total time is accumulated looking at Medusa while Stone Gaze is active, that unit will turn to stone.  Petrified units are stunned, and take bonus physical damage."
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_Lore"							"The beauty of Medusa is legendary."
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_Note0"							"Regardless of when a unit receives the Stone Gaze buff while the ability is active on Medusa, it will still receive the full debuff duration."
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_radius"							"RADIUS:"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_slow"							"%SLOW:"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_bonus_physical_damage"			"%BONUS PHYSICAL DAMAGE:"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_duration"						"DURATION:"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_stone_duration"					"STONE DURATION:"
+"DOTA_Tooltip_ability_medusa_stone_gaze_lua_speed_boost"					"%SPEED BOOST:"
+
+
+"DOTA_Tooltip_ability_medusa_mana_dome"										"Mana Dome"
+"DOTA_Tooltip_ability_medusa_mana_dome_Description"							"Creates Mana Dome, which applies Mana Shield's damage absorption to allies in a %radius% radius, expending Medusa's mana when damage is taken by allies within. Medusa herself gain +%bonus_damage_absorbtion%%% Mana Shield damage absorption inside the dome, and +%bonus_mana_regen%%% mana regen for each friendly hero inside it. Lasts %duration% seconds.\n\nOnly one dome can exist at a time."
+"DOTA_Tooltip_ability_medusa_mana_dome_mana_cost_multiplier"				"ALLIES MANA COST:"
+
+>---------------------------------------
+>--- MINOR SHARD -----------------------
+>---------------------------------------
+
+
+"medusa_split_shot_lua_damage_reduction"			"-{s:value}% {s:ability_name} damage reduction"
+"medusa_split_shot_lua_split_count"					"+{s:value} {s:ability_name} extra targets"
+"medusa_split_shot_lua_search_range"				"+{s:value} {s:ability_name} extra range"
+
+"medusa_mystic_snake_lua_jumps"						"+{s:value} {s:ability_name} jumps"
+"medusa_mystic_snake_lua_damage_increase"			"+{s:value}% {s:ability_name} damage increase per bounce"
+"medusa_mystic_snake_lua_cooldown"					"-{s:value}% {s:ability_name} cooldown"
+
+"medusa_mana_shield_lua_absorption_pct"				"+{s:value}% {s:ability_name} damage absorbed"
+"medusa_mana_shield_lua_damage_per_mana"			"+{s:value} {s:ability_name} damage per mana"
+
+"medusa_stone_gaze_lua_petrification_duration"		"+{s:value} {s:ability_name} Petrification effect duration"
+"medusa_stone_gaze_lua_petrification_bonus_damage"	"+{s:value}% {s:ability_name} Petrification bonus physical damage"
+"medusa_stone_gaze_lua_cooldown"					"-{s:value}% {s:ability_name} cooldown"
+
+>---------------------------------------
+>--- BRISTLE SHARD ---------------------
+>---------------------------------------
+
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_damage_reduction"				"Split Shot: Damage Reduction"
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_damage_reduction_Description"	"<h1>Common Scepter Fragment</h1>Reduces Split Shot damage reduction by %value%%%"
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_split_count"					"Split Shot: Extra Targets count"
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_split_count_Description"		"<h1>Common Scepter Fragment</h1>Increases Split Shot extra targets count by %value%"
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_search_range"					"Split Shot: Search Radius"
+"DOTA_Tooltip_ability_item_medusa_split_shot_lua_search_range_Description"		"<h1>Common Scepter Fragment</h1>Increases Split Shot search range by %value%"
+
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_jumps"						"Mystic Snake: Jumps Count"
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_jumps_Description"			"<h1>Common Scepter Fragment</h1>Increases Mystic Snake jumps count by %value%"
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_damage_increase"				"Mystic Snake: Damage per Bounce"
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_damage_increase_Description"	"<h1>Common Scepter Fragment</h1>Increases Mystic Snake damage per bounce increase by %value%%%"
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_cooldown"					"Mystic Snake: Cooldown"
+"DOTA_Tooltip_ability_item_medusa_mystic_snake_lua_cooldown_Description"		"<h1>Common Scepter Fragment</h1>Reduces Mystic Snake cooldown by %value%%%"
+
+"DOTA_Tooltip_ability_item_medusa_mana_shield_lua_absorption_pct"				"Mana Shield: Absorption"
+"DOTA_Tooltip_ability_item_medusa_mana_shield_lua_absorption_pct_Description"	"<h1>Common Scepter Fragment</h1>Increases Mana Shield absorption by %value%%%"
+"DOTA_Tooltip_ability_item_medusa_mana_shield_lua_damage_per_mana"				"Mana Shield: Damage per Mana"
+"DOTA_Tooltip_ability_item_medusa_mana_shield_lua_damage_per_mana_Description"	"<h1>Common Scepter Fragment</h1>Increases Mana Shield damage per mana by %value%"
+
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_petrification_duration"				"Stone Gaze: Petrification Duration"
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_petrification_duration_Description"	"<h1>Common Scepter Fragment</h1>Increases Stone Gaze petrification duration by %value%"
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_petrification_bonus_damage"			"Stone Gaze: Petrification bonus damage"
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_petrification_bonus_damage_Description""<h1>Common Scepter Fragment</h1>Increases Stone Gaze petrification bonus physical damage by %value%%%"
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_cooldown"								"Stone Gaze: Cooldown"
+"DOTA_Tooltip_ability_item_medusa_stone_gaze_lua_cooldown_Description"					"<h1>Common Scepter Fragment</h1>Reduces Stone Gaze cooldown by %value%%%"
+
+
+>---------------------------------------
+>--- TALENT TREE -----------------------
+>---------------------------------------
+
+
+"DOTA_Tooltip_ability_special_bonus_unique_medusa_mystic_snake_global"				"Global Mystic Snake bounce range"
+
+"DOTA_Tooltip_ability_special_bonus_unique_medusa_mystic_snake_spell_immunity"		"{s:value}s Spell Immunity on Mystic Snake return"
+
+
+>---------------------------------------
+>--- MODIFIER --------------------------
+>---------------------------------------
+
+"DOTA_Tooltip_modifier_medusa_stone_form"							"Stone Form"
+"DOTA_Tooltip_modifier_medusa_stone_form_Description"				"Invulnerable. Gains 5%% health and mana regen."
+
+"DOTA_Tooltip_modifier_medusa_stone_form_cd"						"Stone Form Cooldown"
+"DOTA_Tooltip_modifier_medusa_stone_form_cd_Description"			"Cannot gain Stone Form"
+
+"DOTA_Tooltip_modifier_medusa_magic_shield"							"Magic Shield"
+"DOTA_Tooltip_modifier_medusa_magic_shield_Description"				"Negates magical damage. Deals damage and disarms enemies on expire"
+
+"DOTA_Tooltip_modifier_medusa_petrified_status_lua"					"Petrified"
+"DOTA_Tooltip_modifier_medusa_petrified_status_lua_Description"		"Takes increased physical damage and cannot act"
+
+"DOTA_Tooltip_modifier_medusa_mana_shield_lua"						"Mana Shield"
+"DOTA_Tooltip_modifier_medusa_mana_shield_lua_Description"			"Part of incoming damage is supressed with mana."
+
+"DOTA_Tooltip_modifier_medusa_stone_gaze_active"					"Stone Gaze Active"
+
+"DOTA_Tooltip_modifier_medusa_mana_dome_self"						"Mana Dome mana regen"
+"DOTA_Tooltip_modifier_medusa_mana_dome_self_Description"			"Provides %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% bonus mana regen"
+
+"DOTA_Tooltip_modifier_medusa_mana_dome_effect"						"Mana Dome absorption"
+"DOTA_Tooltip_modifier_medusa_mana_dome_effect_Description"			"Part of incoming damage is absorbed by Mana Shield of Medusa"
+
+
+"npc_dota_hero_medusa_full_title"									"Medusa, Daughter of Hydrophiinae"
+"npc_dota_hero_medusa_full_title_intro"								"In stone gardens lay the shattered witnesses of her petrifying beauty"
+
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>-MEDUSA END-------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------------------------------------------

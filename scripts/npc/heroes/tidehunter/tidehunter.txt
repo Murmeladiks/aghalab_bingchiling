@@ -1,0 +1,22 @@
+"DOTAHeroes"
+{
+	"pathfinder_tidehunter"
+	{
+		"override_hero"			"npc_dota_hero_tidehunter"
+		
+		"Ability1"					"tidehunter_gush_pf"
+		"Ability2"					"tidehunter_kraken_shell_pf"
+		"Ability3"					"tidehunter_anchor_smash_pf"		
+		"Ability6"					"tidehunter_ravage_pf"
+		"Ability7"					"tidehunter_pf_blubber"
+
+		"Ability10"		"special_bonus_movement_speed_15"
+		"Ability11"		"special_bonus_unique_tidehunter_gush_damage"
+		"Ability12"		"special_bonus_mp_regen_5"
+		"Ability13"		"special_bonus_unique_tidehunter_anchor_smash_damage_reduction"
+		"Ability14"		"special_bonus_unique_tidehunter_kraken_shell_damage_reduction"
+		"Ability15"		"special_bonus_unique_tidehunter_gush_negative_armor"
+		"Ability16"		"special_bonus_strength_30"
+		"Ability17"		"special_bonus_attack_damage_200"
+	}
+}

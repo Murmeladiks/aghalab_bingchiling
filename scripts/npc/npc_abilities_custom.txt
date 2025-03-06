@@ -52686,3 +52686,4 @@
     }
     
 }
+#base "heroes/tidehunter/npc_abilities_tidehunter.txt"

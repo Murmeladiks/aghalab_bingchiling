@@ -1,0 +1,11 @@
+
+"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff"			"Discordant Force"
+"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff_Description"			"Increases Queen of Pain's Attack Speed by %attack_speed%, Attack Damage by %bonus_damage% for %buff_duration% seconds for each enemy hit with Sonic Wave."
+
+"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_on_attack"						"Loaded Weapon"
+"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_on_attack_Description"			"Disruptor gains a %strike_chance%%% chance to cast a Thunder Strike on an attacked target."
+
+"DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_trap_Description"	"Templar Assassin has a %trap_chance%%% chance to create a Psionic Trap under a target hit by the Psi Blades spill."
+
+"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_Description"				"Omniknight gains a separate ability, allowing him to cast his current level of Guardian angel on a single target. Cooldown: %cooldown% seconds. Mana cost is reduced by %mana_cost_modifier% percent."
+

@@ -1,0 +1,410 @@
+"Hero_Tidehunter"
+{
+    //=================================================================================================================
+	// Tidehunter: Defishency
+	//=================================================================================================================
+	"tidehunter_pf_blubber"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_pf_blubber"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"Innate"						"1"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "damage_cleanse"		"525"
+            "damage_reset_interval"	"6.0"		
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    //=================================================================================================================
+	// Tidehunter: Gush
+	//=================================================================================================================
+    "tidehunter_gush_pf"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_lua"
+		"AbilityTextureName"			"tidehunter_gush"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastPoint"				"0.3"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+		"AbilityManaCost"				"90 100 110 120"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "gush_damage"
+            {
+                "value"         "110 160 210 260"
+                "special_bonus_unique_tidehunter_gush_damage"   "+90"
+            }
+            "projectile_speed"	        "1600"
+            "movement_speed_reduction"	"40"
+            "negative_armor"
+            {
+                "value"     		    "4 5 6 7"
+                "special_bonus_unique_tidehunter_gush_negative_armor"   "+4"
+            }
+            "radius"		            "200"
+            "cast_range"		        "700"
+            "debuff_duration"		    "4"
+		}
+	}
+
+    //=================================================================================================================
+	// Tidehunter: Kraken Shell
+	//=================================================================================================================
+    "tidehunter_kraken_shell_pf"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_lua"
+		"AbilityTextureName"			"tidehunter_kraken_shell"	
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_Tidehunter.KrakenShell"
+				
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "damage_reduction"
+            {
+                "value"                 		"14 26 38 50"
+                "special_bonus_unique_tidehunter_kraken_shell_damage_reduction"     "+30"
+            }
+            "bonus_reduction_per_kill"
+			{
+				"value"	"0"
+				"special_bonus_facet_tidehunter_kraken_swell"  "0.75 1.5 2.25 3"				
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    //=================================================================================================================
+	// Tidehunter: Anchor Smash
+	//=================================================================================================================
+    "tidehunter_anchor_smash_pf"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_lua"
+		"AbilityTextureName"			"tidehunter_anchor_smash"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		//"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tidehunter.AnchorSmash"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7.0 6.0 5.0 4.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 50 55 60"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "attack_damage"			"45 90 135 180"
+            "damage_reduction"
+            {
+                "value"         	"30 40 50 60"
+                "special_bonus_unique_tidehunter_anchor_smash_damage_reduction" "+15"
+            }
+            "reduction_duration"	"6"
+            "radius"										
+			{
+				"value" "375"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+    "special_bonus_unique_tidehunter_gush_damage"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                 
+    }
+    "special_bonus_unique_tidehunter_gush_negative_armor"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                  
+    }
+    "tidehunter_gush_pf_ravage"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_gush"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "damage_percent" "20"
+        }   
+	}
+    "tidehunter_gush_pf_bounce"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_gush"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "radius" "1200"
+            "bounce" "2"
+        }   
+	}
+    "tidehunter_gush_pf_miss"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_gush"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "miss_percent" "33"
+        }   
+	}
+    
+    "special_bonus_unique_tidehunter_kraken_shell_damage_reduction"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                   
+    }
+
+    "tidehunter_kraken_shell_pf_gush"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_kraken_shell"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+		{
+			"radius"					"1500"
+            "targets"					"3"
+		}
+	}
+
+    "tidehunter_kraken_shell_pf_heal"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_kraken_shell"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+		{
+			"radius"					"1000"
+            "heal_percent"              "30"
+		}   
+	}
+    "tidehunter_kraken_shell_pf_ravage_cdr"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_kraken_shell"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+		{
+			"cdr_percent"					"5"
+		}   
+	}
+    
+    "special_bonus_unique_tidehunter_anchor_smash_damage_reduction"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                   
+    }
+    "tidehunter_anchor_smash_pf_allies"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_anchor_smash"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "radius" "700"
+        }   
+	}
+    "tidehunter_anchor_smash_pf_whack"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_anchor_smash"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "root_duration" "2"
+            "root_chance" "45"
+        }   
+	}
+    "tidehunter_anchor_smash_pf_karate"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_anchor_smash"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"     
+	}
+
+    "tidehunter_ravage_pf"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_lua.lua"
+		"AbilityTextureName"			"tidehunter_ravage"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Ability.Ravage"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastPoint"				"0.5"		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"100"
+				
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 225 325"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "radius" "1250"
+            "speed" "725"
+            "duration" "2.4 2.6 2.8"
+            "damage" "200 300 400"
+        }			
+	}
+
+    "tidehunter_ravage_pf_puddle"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "tidehunter_ravage"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "radius" "500"
+            "block_amp" "75"
+            "stun_chance" "10"
+        }   
+	}
+
+    "tidehunter_pf_crunch"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/tidehunter/tidehunter_lua.lua"
+		"AbilityTextureName"			"kunkka_ghostship_immortal"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+        "AbilityCastAnimation"          "ACT_DOTA_TAUNT"
+        "AnimationPlaybackRate"         "1.4"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastPoint"				"0.35"        
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45"
+		"AbilityManaCost"				"120"
+        "AbilityCastRange"              "270"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "duration" "5"
+            "pct_damage" "5"
+            "speed_reduction" "8"
+            "armor" "1"
+            "health" "120"
+            "magic_resist" "3"
+            "size" "8"
+            "status_resist" "4"
+            "regen" "3"
+            "as_reduction" "5"
+            "damage_bonus" "3"
+        }
+	}
+}
