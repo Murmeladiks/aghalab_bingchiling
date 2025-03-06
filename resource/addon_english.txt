@@ -3321,7 +3321,10 @@
 		//---------------------------------------
 		//--- ABILITY ---------------------------
 		//---------------------------------------
-
+		"DOTA_Tooltip_Ability_tidehunter_pf_blubber"														"Blubber"
+		"DOTA_Tooltip_Ability_tidehunter_pf_blubber_Description"											"Tidehunter's hide also removes negative status effects if the player-based damage taken crosses a threshold"
+		"DOTA_Tooltip_Ability_tidehunter_pf_blubber_damage_cleanse"											"Damage Threshold:"
+		"DOTA_Tooltip_Ability_tidehunter_pf_blubber_damage_reset_interval"									"Threshold Reset Timer:"
 		"DOTA_Tooltip_Ability_tidehunter_gush_pf"	                                                        "Gush"
 		"DOTA_Tooltip_Ability_tidehunter_gush_pf_Description"	                                            "Summons a gush of water to damage all enemy units in an area, reducing their movement speed and armor."
 		"DOTA_Tooltip_Ability_tidehunter_gush_pf_gush_damage"	                                            "Damage:"
