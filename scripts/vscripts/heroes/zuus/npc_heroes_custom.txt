@@ -1,0 +1,25 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_zuus_pf"
+    {
+        "override_hero"			"npc_dota_hero_zuus"
+
+		"Ability1"				"zuus_arc_lightning_pf"
+        "Ability2"				"zuus_lightning_bolt_pf"
+        "Ability3"              "zuus_static_field_pf"
+		"Ability4"				"zuus_cloud_pf"
+		"Ability5"				"zuus_heavenly_jump_pf"
+        "Ability6"              "zuus_thundergods_wrath_pf"
+		"Ability7"				"generic_hidden"	
+
+		// Bottom right first
+		"Ability10"				"special_bonus_intelligence_12"
+		"Ability11"				"special_bonus_unique_zuus_arc_lightning_ministun"
+		"Ability12"				"special_bonus_spell_amplify_15"
+		"Ability13"				"special_unique_pathfinder_zuus_autoattack_cooldowns"
+		"Ability14"				"special_bonus_unique_zuus_static_field_damage_increase"
+		"Ability15"				"special_bonus_unique_zuus_thundergods_wrath_cooldown"
+		"Ability16"				"special_unique_pathfinder_zuus_non_ult_spell_immunity_pierce"
+		"Ability17"				"special_bonus_unique_zuus_ult_spell_immunity"
+    }
+}

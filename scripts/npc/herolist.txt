@@ -51,7 +51,7 @@
     "npc_dota_hero_zuus"                   "1"
     "npc_dota_hero_medusa"                 "1"
     "npc_dota_hero_marci"                  "1"
-    "npc_dota_hero_bristleback"            "1"
+    "npc_dota_hero_bristleback"            "0"
     
     // Additional Heroes (Ensuring all are listed)
 

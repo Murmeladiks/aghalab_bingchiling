@@ -1,0 +1,12 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_lich_aghsfort"
+    {
+        "override_hero"		"npc_dota_hero_lich"
+        "Ability1"			"lich_pf_frost_nova"
+        "Ability2"			"lich_pf_frost_shield"
+        "Ability3"			"lich_pf_sinister_gaze"
+        "Ability6"			"lich_pf_chain_frost"
+        "Ability17"			"special_bonus_unique_aghsfort_lich_extra_chain_frost_jumps"
+    }
+}

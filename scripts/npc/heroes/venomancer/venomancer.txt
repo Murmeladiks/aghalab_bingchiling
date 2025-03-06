@@ -1,0 +1,21 @@
+"DOTAHeroes"
+{
+	"pathfinder_venomancer"
+	{
+		"override_hero"			"npc_dota_hero_venomancer"
+		"Ability1"				"venomancer_venomous_gale"
+		"Ability2"				"venomancer_poison_sting_datadriven"
+		"Ability3"				"venomancer_plague_ward_datadriven"				
+		"Ability6"				"venomancer_poison_nova_datadriven"
+		
+			
+		"Ability10"				"special_bonus_mp_regen_3"	
+		"Ability11"				"special_bonus_hp_200"
+		"Ability12"				"special_bonus_unique_venomancer_ward_duration"
+		"Ability13"				"special_bonus_attack_speed_70"
+		"Ability14"				"special_bonus_unique_venomancer_ward_split_shot"
+		"Ability15"				"special_bonus_unique_venomancer_ward_true_strike"
+		"Ability16"				"special_bonus_spell_amplify_20"
+		"Ability17"				"special_bonus_movement_speed_40"					
+	}
+}

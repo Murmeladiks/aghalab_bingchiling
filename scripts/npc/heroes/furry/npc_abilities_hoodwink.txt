@@ -1,0 +1,446 @@
+"Hero_Hoodwink"
+{    
+    //=================================================================================================================
+	// Hoodwink: Mistwoods Wayfarer (Innate)
+	//=================================================================================================================
+	"hoodwink_mistwoods_wayfarer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"DependentOnAbility"			"pathfinder_sharpshooter"
+		"Innate"						"1"
+ 		"MaxLevel"						"4"
+
+ 		"AbilityValues"
+ 		{
+ 			"radius"						
+			{
+				"value"		"275"
+				"affected_by_aoe_increase"	"1"	
+			}
+
+			"redirect_chance"	"15 20 25 30"		
+ 		}
+	}
+
+    //=================================================================================================================
+	// Hoodwink: Acorn Shot
+	//=================================================================================================================
+    "pathfinder_acorn_shot"
+	{
+        "ScriptFile"					"heroes/furry/pathfinder_hoodwink"
+		"BaseClass"						"ability_lua"
+        "AbilityTextureName"			"hoodwink_acorn_shot"
+		// General
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 14 12 10"		
+		"AbilityCastPoint"				"0.2"
+		"AbilityManaCost"				"75 85 95 105"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{		
+            "bonus_range"			"75 150 225 300"
+            "bonus_damage"			"20 40 60 80"
+            "projectile_speed"		"2000"
+            "bounce_count"
+			{
+				"value"				"2 3 4 5"
+				"special_bonus_unique_acorn_shot_bounce_count"	"+4"
+			}
+            "bounce_range"			"525"
+            "debuff_duration"		"0.25"
+            "slow"					"100"
+            "bounce_delay"			"0.1"
+            "tree_duration"			"20"
+			"can_bounce_off_of_trees"
+			{
+				"value"									"0"
+				"special_bonus_facet_hoodwink_treebounce_trickshot"	"+1"
+			}
+			"bounces_after_tree_bounce"
+			{
+				"value"									"0"
+				"special_bonus_facet_hoodwink_treebounce_trickshot"	"+1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Hoodwink: Bushwhack
+	//=================================================================================================================
+	"pathfinder_bushwhack"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ScriptFile"					"heroes/furry/pathfinder_hoodwink"
+		"BaseClass"						"ability_lua"
+        "AbilityTextureName"			"hoodwink_bushwhack"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "trap_radius" "275"
+            "debuff_duration" "1.3 1.6 1.9 2.2"
+            "projectile_speed" "1000"
+            "total_damage" "90 180 270 360"
+            "animation_rate" "0.3"
+            "visual_height" "50"
+        }
+	}
+
+
+	//=================================================================================================================
+	// Hoodwink: Scurry
+	//=================================================================================================================
+	"pathfinder_scurry"
+	{
+        "ScriptFile"					"heroes/furry/pathfinder_hoodwink"
+		"BaseClass"						"ability_lua"
+        "AbilityTextureName"			"hoodwink_scurry"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"275"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22 18 14 10"
+		// "AbilityCharges"				"2"
+		// "AbilityChargeRestoreTime"		"30 25 20 15"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"35"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"						"275"
+			"movement_speed_pct"			"20 25 30 35"
+			"duration"						"4.0"
+			"evasion"						"8 16 24 32"
+			"cast_range"						
+			{
+				"value"							"0"
+				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200"				
+			}
+			"attack_range"
+			{
+				"value"							"0"
+				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200"				
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Hoodwink: Sharpshooter
+	//=================================================================================================================
+	"pathfinder_sharpshooter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ScriptFile"					"heroes/furry/pathfinder_hoodwink"
+		"BaseClass"						"ability_lua"
+        "AbilityTextureName"			"hoodwink_sharpshooter"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Mirana.ArrowCast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"arrow_speed"		"2200"
+			"arrow_width"		"125"
+			"arrow_range"
+			{
+				"value"			"1200"
+				"special_bonus_unique_sharpshooter_arrow_range" 	"+9000"
+			}
+			"arrow_vision"		"350"
+			"max_charge_time"			"2.5"
+			"max_damage"				"600 1000 1400"
+			"recoil_distance"			"350"
+			"recoil_height"				"75"
+			"recoil_duration"			"0.4"
+			"max_slow_debuff_duration"	"6.0"
+			"misfire_time"				"5.0"
+			"slow_move_pct"				"50"
+			"turn_rate"					"40"
+			"max_hit"					"6"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_6"
+	}
+
+	//=================================================================================================================
+	// Hoodwink: Sharpshooter Release
+	//=================================================================================================================
+	"pathfinder_sharpshooter_release"	
+	{
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "hoodwink_sharpshooter_release"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"		
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_7"
+ 		"MaxLevel"						"1"
+
+        "OnSpellStart"
+		{	
+            "RemoveModifier"
+            {
+                "ModifierName"		"modifier_pathfinder_sharpshooter"
+                "Target"			"CASTER"                
+            }
+		}
+	}
+
+    "special_bonus_unique_sharpshooter_arrow_range"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                   
+    }
+
+    "special_bonus_unique_acorn_shot_bounce_count"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"                   
+    }
+
+    "special_bonus_unique_pathfinder_sharpshooter_invis"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"        
+        "AbilityValues"
+        {
+        }            
+    }
+    
+
+    "pathfinder_bushwhack_ground"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_bushwhack"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "duration" "60"
+        }   
+	}
+
+    "pathfinder_bushwhack_multi_attack"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_bushwhack"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "dmg_percent" "30"
+        }   
+	}
+
+    "pathfinder_bushwhack_scurry"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_bushwhack"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "interval" "1.5"
+        }   
+	}
+
+    "pathfinder_sharpshooter_moving"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_sharpshooter"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "damage_reduction" "80"
+            "tree_gap" "150"
+        }   
+	}
+    "pathfinder_sharpshooter_pierce"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_sharpshooter"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "captains_hit" "4"
+        }   
+	}
+    "pathfinder_sharpshooter_reset"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_sharpshooter"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "reduction" "25"
+        }   
+	}
+
+    "pathfinder_sharpshooter_spread"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_sharpshooter"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "extra_shots" "4"
+        }   
+	}
+    "pathfinder_acorn_shot_attack"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_acorn_shot"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "chance" "10"
+        }   
+	}
+
+    "pathfinder_acorn_shot_stun"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_acorn_shot"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "base_stun" "0.2"
+            "base_damage" "40"
+        }   
+	}
+
+    "pathfinder_acorn_shot_tree"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_acorn_shot"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "stun_duration" "0.2"
+            "radius" "300"
+            "heal_percent" "2"
+        }   
+	}
+
+    "pathfinder_scurry_canadian"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_scurry"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "heal_percent" "5"
+            "regrow_time" "10"
+            "extend_time" "1"
+        }   
+	}
+
+    "pathfinder_scurry_leap"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_scurry"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "leap_duration" "0.6"
+            "leap_distance" "1000"
+            "knock_radius" "250"
+            "stun_duration" "0.4"
+        }   
+	}
+
+    "pathfinder_scurry_allies"
+	{
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "hoodwink_scurry"
+        "MaxLevel"                      "1"
+        "BaseClass"                     "ability_datadriven"    
+        "AbilityValues"
+        {
+            "radius" "500"
+            "extend_time" "2"
+        }   
+	}
+}

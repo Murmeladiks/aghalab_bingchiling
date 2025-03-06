@@ -1,0 +1,26 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_phoenix_pf"
+	{
+		"override_hero"			"npc_dota_hero_phoenix"
+
+		"Ability1"					"phoenix_icarus_dive_pf"
+		"Ability2"					"phoenix_fire_spirits_pf"
+		"Ability3"					"phoenix_sun_ray_pf"
+		"Ability4"					"phoenix_sun_ray_toggle_move_pf"
+		"Ability5"					"phoenix_pf_blinding_sun"		
+		"Ability6"					"phoenix_supernova_pf"
+		"Ability7"					"phoenix_launch_fire_spirit_pf"
+		"Ability8"					"phoenix_icarus_dive_stop_pf"
+		"Ability9"					"phoenix_sun_ray_stop_pf"
+		
+		"Ability10"		"special_bonus_pathfinder_phoenix_icarus_dive_pf+burn_duration"
+		"Ability11"		"special_bonus_spell_amplify_6"
+		"Ability12"		"special_bonus_pathfinder_phoenix_supernova_pf+max_health_for_egg"
+		"Ability13"		"special_bonus_hp_500"
+		"Ability14"		"special_bonus_pathfinder_phoenix_icarus_dive_pf+dash_length"
+		"Ability15"		"special_bonus_pathfinder_phoenix_launch_fire_spirit_pf+damage_per_second"
+		"Ability16"		"special_bonus_unique_phoenix_egg_bkb"
+		"Ability17"		"special_bonus_magic_resistance_40"
+	}
+}

@@ -1,0 +1,13 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_winter_wyvern_aghsfort"
+	{
+		"override_hero"			"npc_dota_hero_winter_wyvern"
+		"Ability1"				"winter_wyvern_pf_arctic_burn"
+		"Ability2"				"winter_wyvern_pf_splinter_blast"
+		"Ability3"				"winter_wyvern_pf_cold_embrace"
+		"Ability6"				"winter_wyvern_pf_winters_curse"
+		"Ability13"				"special_bonus_attack_speed_30"
+		"Ability15"				"special_bonus_spell_amplify_11"
+	}
+}

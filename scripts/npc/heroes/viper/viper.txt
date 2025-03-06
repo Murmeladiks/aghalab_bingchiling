@@ -1,0 +1,14 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_viper_aghsfort"
+	{
+		"override_hero"			"npc_dota_hero_viper"
+		"Ability1"		"aghsfort_viper_poison_attack"
+		"Ability2"		"aghsfort_viper_nethertoxin"
+		"Ability3"		"aghsfort_viper_corrosive_skin"
+		"Ability6"		"aghsfort_viper_viper_strike"
+		"Ability16"		"special_bonus_hp_400"
+		"Ability17"		"special_bonus_movement_speed_40"
+		"Ability11"		"special_bonus_spell_lifesteal_6"
+	}
+}

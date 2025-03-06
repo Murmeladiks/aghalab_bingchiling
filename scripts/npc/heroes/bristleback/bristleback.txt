@@ -1,0 +1,20 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_bristleback_pf"
+    {
+        "override_hero"			"npc_dota_hero_bristleback"
+
+        "Ability1"				"bristleback_viscous_nasal_goo_pf"
+        "Ability2"				"bristleback_quill_spray_pf"
+        "Ability3"              "bristleback_bristleback_pf"
+        "Ability4"				"bristleback_call_quilly_pf"
+        "Ability5"				"bristleback_betray_quilly_pf"
+        "Ability6"              "bristleback_warpath_pf"
+
+        // Bottom right first
+        //"Ability14"				"special_unique_pathfinder_talent_damage_reflection_12" uhhh?
+        //"Ability15"				"special_bonus_pathfinder_bristleback_quill_spray_pf+quill_stack_damage"
+        //"Ability16"				"special_bonus_status_resistance_50"
+        //"Ability17"				"special_bonus_hp_regen_50"
+    }
+}

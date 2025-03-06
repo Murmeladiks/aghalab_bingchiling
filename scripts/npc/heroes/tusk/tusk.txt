@@ -1,0 +1,18 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_tusk_aghsfort"
+	{
+		"override_hero"			"npc_dota_hero_tusk"
+		"Ability1"		"aghsfort_tusk_ice_shards"
+		"Ability2"		"aghsfort_tusk_snowball"
+		"Ability3"		"aghsfort_tusk_tag_team"
+		"Ability4"		"aghanim_empty_spell1"
+		"Ability6"		"aghsfort_tusk_walrus_punch"
+		"Ability7"		"aghsfort_tusk_launch_snowball"
+		"Ability14"		"special_bonus_movement_speed_30"
+		"Ability17"		"special_bonus_attack_speed_40"
+		"ArmorPhysical"		"1"
+		"AttackDamageMin"		"29"
+		"AttackDamageMax"		"33"
+	}
+}

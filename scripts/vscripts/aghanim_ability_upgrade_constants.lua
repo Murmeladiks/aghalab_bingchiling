@@ -57,7 +57,7 @@ _G.MINOR_ABILITY_UPGRADES =
    npc_dota_hero_arc_warden  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
  
 
-   npc_dota_hero_axe  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
+   --npc_dota_hero_axe  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
  
 
 
@@ -151,7 +151,7 @@ _G.MINOR_ABILITY_UPGRADES =
    npc_dota_hero_huskar  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
  
 
-   npc_dota_hero_jakiro  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
+   --npc_dota_hero_jakiro  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
  
 
 
@@ -480,7 +480,7 @@ _G.STAT_UPGRADE_EXCLUDES =
    npc_dota_hero_ancient_apparition  ={},  
    npc_dota_hero_antimage  ={},  
    npc_dota_hero_arc_warden  ={},  
-   npc_dota_hero_axe  ={},  
+   npc_dota_hero_axe  ={"aghsfort_minor_stat_upgrade_bonus_evasion"},  
  
    npc_dota_hero_batrider  ={},  
    npc_dota_hero_beastmaster  ={},  
@@ -630,7 +630,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    -- npc_dota_hero_ancient_apparition  ="",  
    -- npc_dota_hero_antimage  ="",  
    -- npc_dota_hero_arc_warden  ="",  
-   -- npc_dota_hero_axe  ="",   
+    npc_dota_hero_axe  ="axe_culling_blade",   
     npc_dota_hero_batrider  ="",  
    -- npc_dota_hero_beastmaster  ="",  
     --npc_dota_hero_bloodseeker  ="",  
@@ -659,7 +659,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    -- npc_dota_hero_grimstroke  ="",  
    -- npc_dota_hero_hoodwink     ="" ,
    -- npc_dota_hero_huskar  ="",  
-   -- npc_dota_hero_jakiro  ="",  
+    npc_dota_hero_jakiro  ="",  
    -- npc_dota_hero_keeper_of_the_light  ="",  
    -- npc_dota_hero_legion_commander  ="",  
    -- npc_dota_hero_leshrac  ="",  
@@ -762,9 +762,26 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_kez"] ={
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_arc_warden"] ={
    "empty_undefined_ability"
 }  
-     SPECIAL_ABILITY_UPGRADES["npc_dota_hero_axe"] ={
-   "empty_undefined_ability"
-}  
+SPECIAL_ABILITY_UPGRADES["npc_dota_hero_axe"] =
+{
+	"pathfinder_axe_special_culling_blade_leap",   
+	"pathfinder_axe_special_culling_blade_omnislash",
+	"pathfinder_axe_special_culling_blade_heal",
+	"pathfinder_axe_special_culling_blade_delay",
+
+	"pathfinder_axe_special_counter_helix_reduce_damage",
+	"pathfinder_axe_special_counter_helix_allies",
+	"pathfinder_axe_special_counter_helix_fury",
+
+	"pathfinder_axe_special_battle_hunger_lifesteal",
+	"pathfinder_axe_special_battle_hunger_culling_cdr",
+	"pathfinder_axe_special_battle_hunger_refresh",
+
+	"pathfinder_axe_special_berseker_call_health",
+	"pathfinder_axe_special_berseker_call_battle_hunger",
+	"pathfinder_axe_special_berseker_call_allies",
+	"pathfinder_axe_special_berseker_call_blink",
+} 
 
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_batrider"] ={
    "special_bonus_unique_batrider_sticky_napalm_infinity",
@@ -1964,3 +1981,8 @@ PURCHASABLE_SHARDS[ "npc_dota_hero_void_spirit" ] =
    "item_aghsfort_void_spirit_astral_step_charge_restore_time",
 }
 require("heroes/tidehunter/aghanim_ability_upgrade_tidehunter")
+require("heroes/axe/aghanim_ability_upgrade_axe")
+require("heroes/zuus/aghanim_ability_upgrade_zuus")
+require("heroes/dawnbreaker/aghanim_ability_upgrade_dawnbreaker")
+require("heroes/bristleback/aghanim_ability_upgrade_constants")
+require("heroes/jakiro/aghanim_ability_upgrade_jakiro")

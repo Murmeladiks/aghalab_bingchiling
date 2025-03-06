@@ -1,0 +1,24 @@
+
+"DOTAHeroes"
+{
+    "pathfinder_dazzle"
+    {
+        "override_hero"			"npc_dota_hero_dazzle"
+        
+        "Ability1"					"pf_poison_touch"
+        "Ability2"					"pf_shallow_grave"
+        "Ability3"					"pf_shadow_wave"
+        "Ability4"		            "dazzle_pf_innate_weave"
+        "Ability5"					"generic_hidden"	
+        "Ability6"					"dazzle_pf_bad_juju"
+
+        "Ability10"		"special_bonus_attack_damage_50"
+        "Ability11"		"special_bonus_mp_regen_3"
+        "Ability12"		"special_bonus_movement_speed_30"
+        "Ability13"		"special_bonus_attack_speed_60"
+        "Ability14"		"special_bonus_unique_dazzle_bad_juju_cooldown_reduction"
+        "Ability15"		"special_bonus_unique_pf_shallow_grave_duplicate"		
+        "Ability16"		"special_bonus_unique_dazzle_poison_touch_max_stack"
+        "Ability17"		"special_bonus_unique_dazzle_shadow_wave_damage"
+    }
+}

@@ -1,0 +1,555 @@
+"Hero_Lina"
+{
+    //=================================================================================================================
+    // Lich: Frost Nova
+    //=================================================================================================================
+    "lich_pf_frost_nova"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"					"heroes/lich/lich_pf_frost_nova"
+		"AbilityTextureName"            "lich_frost_nova"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Ability.FrostNova"
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "575 600 625 650"
+        "AbilityCastPoint"              "0.3"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDuration"               "4.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"40 80 120 160"
+
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "110 120 130 140"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.3"   // Primarily about the damage
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {         
+			"AbilityCooldown"
+			{
+				"value"		"7.0"
+				"special_bonus_unique_lich_3" "-3.5"
+			}
+			"radius"				
+			{
+				"value"							"200"
+				"special_bonus_unique_lich_6" 	"+125"
+				"affected_by_aoe_increase"		"1"
+			}
+			"slow_movement_speed"	"-25"
+			"slow_attack_speed_primary"		"-30"
+			"aoe_damage"			
+			{
+				"value"			"80 120 160 200"
+				"special_bonus_unique_lich_6" "+125"
+			}            
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+	//=================================================================================================================
+    // Lich: Frost Shield
+    //=================================================================================================================
+    "lich_pf_frost_shield"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+        "ScriptFile"					"heroes/lich/lich_pf_frost_shield"
+        "AbilityTextureName"            "lich_frost_shield"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"        
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_Lich.FrostArmor"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "1000"
+        "AbilityCastPoint"              "0.2"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 18 16 14"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "100 110 120 130"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+			"damage_reduction"
+			{
+				"value"							"7 14 21 28"
+				"CalculateSpellDamageTooltip"	"0"
+				"special_bonus_unique_lich_8"	"+10"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+			"movement_slow"			"20 25 30 35"
+			"slow_duration"			"0.5"
+			"damage"
+			{
+				"value"			"20 30 40 50"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"interval"				"1"
+			"radius"				
+			{
+				"value"			"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"
+			{
+				"value"	"5"
+				"special_bonus_unique_lich_4"	"+4"
+			}
+			"health_regen"
+			{
+				"special_bonus_unique_lich_1" "+50"
+			}
+            "bonus_duration_per_hero_killed"
+			{
+				"value"					"0"
+				"special_bonus_facet_lich_growing_cold"			"+4"				
+			}
+			"bonus_duration_per_creep_killed"
+			{
+				"value"				"0"
+				"special_bonus_facet_lich_growing_cold"			"+1"				
+			}
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+    
+    //=================================================================================================================
+    // Lich: Sinister Gaze
+    //=================================================================================================================
+    "lich_pf_sinister_gaze"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+        "ScriptFile"					"heroes/lich/lich_pf_sinister_gaze"
+        "AbilityTextureName"            "lich_sinister_gaze"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "HasScepterUpgrade"         	"1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "24 22 20 18"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "120 130 140 150"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+			"AbilityChannelTime"
+			{
+				"value" 						"1.10 1.4 1.7 2.0"
+				"special_bonus_unique_lich_2" 	"+0.4"
+			}
+			"destination"			"32 38 44 50"
+			"mana_drain"			"12"
+			"aoe"
+			{
+				"value" 					"400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"cast_range"        	"600"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    //=================================================================================================================
+    // Lich: Chain Frost
+    //=================================================================================================================
+    "lich_pf_chain_frost"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+        "ScriptFile"					"heroes/lich/lich_pf_chain_frost"
+        "AbilityTextureName"            "lich_chain_frost"
+
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "FightRecapLevel"               "2"
+        "AbilitySound"                  "Hero_Lich.ChainFrost"
+
+        "AbilityDraftUltShardAbility"       "lich_ice_spire"
+
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "750"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCastAnimation"      	"ACT_DOTA_CAST_ABILITY_6"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "60.0 55.0 50.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "200 350 500"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.0"   // Primarily about the damage
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+			"damage"
+			{
+				"value"		"250 400 550"
+			}
+			"bonus_jump_damage"		
+			{
+				"value"			"15 20 25"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"jumps"
+            {
+                "value"					"10"
+                "special_bonus_unique_aghsfort_lich_extra_chain_frost_jumps"    "+10"
+                "special_bonus_unique_lich_chain_frost_applies_frost_shield"    "+4"
+            }
+			"jump_range"			
+			{
+				"value"			"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow_movement_speed"	"-65"
+			"slow_attack_speed"		"-65"
+			"slow_duration"			"2.5"
+			"initial_projectile_speed"
+            {
+                "value"             "1050"
+                "special_bonus_unique_aghsfort_lich_extra_chain_frost_jumps"    "+100"
+            }		
+			"projectile_speed"
+            {
+                "value"             "850"
+                "special_bonus_unique_aghsfort_lich_extra_chain_frost_jumps"    "+100"
+            }
+            "bounce_delay"          "0.2"
+			"vision_radius"			
+			{
+				"value"				"800"
+				"affected_by_aoe_increase"		"1"
+			}
+			"has_unlimited_jumps"
+			{
+				"special_bonus_unique_lich_5"	"+1"
+			}
+			"should_fire_chain_frost_on_death"
+			{
+				"special_bonus_unique_lich_7" "+1"
+			}
+            "bonus_jumps_per_hero_killed"
+			{
+				"value"					"0"
+				"special_bonus_facet_lich_growing_cold"			"+3"				
+			}
+			"bonus_jumps_per_creep_killed"
+			{
+				"value"											"0"
+				"special_bonus_facet_lich_growing_cold"			"+1"				
+			}
+			"frostbound_duration"						
+			{
+				"value"							"0"
+				"special_bonus_facet_lich_frostbound"			"=2 =3 =4"				
+			}
+        }           
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Nova Root Disarm
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_nova_root_disarm"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_nova"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Nova Applies Frost Shield
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_nova_applies_frost_shield"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_nova"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Nova Execute Refund
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_nova_execute_refund"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_nova"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"cooldown_pct"				    "100"
+			"mana_cost_pct"					"75"
+			"primary_target_damage_pct"		"50"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Nova AOE Attacks
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_nova_aoe_attacks"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_nova"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"splash_damage_pct"			"50"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Shield Magic Resist Debuff And Stun
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_shield_magic_resist_debuff_and_stun"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_shield"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"debuff_duration"			"10"
+			"magic_resist_reduction"	"5"
+			"stun_duration"				"0.1"
+			"max_stacks"				"6"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Shield Heal
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_shield_heal"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_shield"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"heal_percent"			    "25"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Shield Frost Giant
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_shield_frost_giant"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_shield"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"movement_speed"				"50"
+			"model_scale"					"60"
+			"pct_int_damage_per_second"		"100"
+			"damage_radius"					"100"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Frost Shield Dispels
+    //=================================================================================================================
+    "aghsfort_special_lich_frost_shield_dispels"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_frost_shield"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"immunity_duration_pct"		"50"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Chain Frost Split
+    //=================================================================================================================
+    "aghsfort_special_lich_chain_frost_split"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_chain_frost"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"split_chance_percent"		"20"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Sinister Gaze Spawns Ice Spire
+    //=================================================================================================================
+    "aghsfort_special_lich_sinister_gaze_spawns_ice_spire"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_sinister_gaze"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"bonus_movespeed"			"-50"
+			"duration"					"18.0"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Sinister Gaze Drains Life
+    //=================================================================================================================
+    "aghsfort_special_lich_sinister_gaze_drains_life"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_sinister_gaze"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"mana_burn_pct"			"150"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Sinister Gaze Raises Skeletons
+    //=================================================================================================================
+    "aghsfort_special_lich_sinister_gaze_raises_skeletons"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_sinister_gaze"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"skeleton_duration"			"10"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Chain Frost Applies Frost Shield
+    //=================================================================================================================
+    "special_bonus_unique_lich_chain_frost_applies_frost_shield"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_chain_frost"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+			"extra_jumps"				"4"
+			"bonus_friend_range_pct"	"50"
+        }
+    }
+
+    //=================================================================================================================
+    // Ability: Lich Chain Frost Applies Frost Nova
+    //=================================================================================================================
+    "aghsfort_special_lich_chain_frost_applies_frost_nova"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityTextureName"            "lich_chain_frost"
+		"BaseClass"                     "ability_datadriven"
+        "AbilityValues"
+        {
+        }
+    }
+
+	//=================================================================================================================
+	// Ability: Chain Frost Extra Jumps Talent
+	//=================================================================================================================
+	"special_bonus_unique_aghsfort_lich_extra_chain_frost_jumps"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+		}
+	}
+}

@@ -1,0 +1,30 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_dawnbreaker_pf"
+    {
+        "override_hero"			"npc_dota_hero_dawnbreaker"
+        "particle_folder"		"particles/units/heroes/hero_dawnbreaker"
+        "GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_dawnbreaker.vsndevts"
+        "VoiceFile"				"soundevents/voscripts/game_sounds_vo_dawnbreaker.vsndevts"
+        "SoundSet"          	"Hero_Dawnbreaker"
+        "IdleExpression"    	"scenes/dawnbreaker/dawnbreaker_face_idle.vcd"
+
+        "Ability1"					"dawnbreaker_starbreaker_lua"
+        "Ability2"					"dawnbreaker_celestial_hammer_lua"
+        "Ability3"					"dawnbreaker_luminosity_lua"
+        "Ability4"					"dawnbreaker_converge_lua"
+        "Ability5"					"dawnbreaker_solar_guardian_lua_permanent"
+        "Ability6"					"dawnbreaker_solar_guardian_lua"
+
+        "Ability15"					"special_bonus_unique_dawnbreaker_fire_wreath_cooldown"
+        "Ability16"					"special_bonus_unique_dawnbreaker_luminosity_attack_count"
+
+        //"Ability10"		"special_bonus_strength_8"
+        //"Ability11"		"special_bonus_movement_speed_20"
+        //"Ability12"		"special_bonus_attack_damage_20"
+        //"Ability13"		"special_bonus_pathfinder_dawnbreaker_celestial_hammer_lua+pause_duration"
+        //"Ability14"		"special_bonus_pathfinder_dawnbreaker_luminosity_lua+bonus_damage"
+        //"Ability15"		"special_bonus_pathfinder_dawnbreaker_solar_guardian_lua+cooldown"
+        //"Ability16"		"special_bonus_unique_dawnbreaker_luminosity_attack_count"
+    }
+}
