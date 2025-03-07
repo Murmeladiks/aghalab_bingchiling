@@ -1,0 +1,779 @@
+"DOTAAbilities"
+{
+    "pathfinder_venomancer_venomous_gale"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/venomancer/venomous_gale"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Venomancer.VenomousGale"
+		"HasShardUpgrade"				"0"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"95 105 115 125"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"15"
+			"strike_damage"			
+			{
+				"value"					"25 50 75 100"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"tick_damage"			
+			{
+				"value"					"10 40 70 100"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"tick_interval"			"3.0 3.0 3.0 3.0"
+			"movement_slow"			"-50 -50 -50 -50"
+			"radius"				
+			{
+				"value"		"125"
+				"affected_by_aoe_increase"	"1"
+			}
+			"speed"					"1200 1200 1200 1200"
+			"create_wards"
+			{
+				"value"					"0"
+				"special_bonus_unique_venomancer_gale_plagueward"		"+2"
+			}	
+			"AbilityCooldown"
+			{
+				"value"												"21 20 19 18"
+				"special_bonus_unique_venomancer_3"					"-5"
+			}
+		}
+    }
+
+	// VENOMANCER DATA DRIVEN
+
+    "venomancer_plague_ward_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"venomancer_plague_ward"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+			"model"				"models/heroes/venomancer/venomancer_ward.vmdl"
+		}
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.25"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 22 24 26"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "15.0 20.0 25.0 30.0"
+                "LinkedSpecialBonus" "special_bonus_unique_venomancer_ward_duration"
+            }
+            "health" "120 230 340 450"
+            "attack_speed" "0"
+            "damage" "17 25 37 41"
+        }
+	
+		"OnSpellStart"
+		{			
+			"RunScript"
+			{
+				"ScriptFile"		"heroes/venomancer/plague_ward.lua"
+				"Function"			"venomancer_plague_ward_datadriven_on_spell_start"
+				"Target"			"POINT"
+				"Duration"			"%duration"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_plague_ward_datadriven"
+			{
+				"Passive"		"0"
+				"IsHidden"		"1"
+				"IsBuff"		"1"
+				"IsDebuff"		"0"
+				"IsPurgable"	"0"
+	
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/venomancer/plague_ward.lua"
+						"Function"			"modifier_plague_ward_datadriven_on_attack_landed"
+					}
+				}
+			}
+			
+			//A hidden modifier.  Stacks of this modifier are used to slow the target by the correct amount.
+			//The stack count is set to 0 when a Poison Sting debuff originating from Venomancer is applied, and restored when that debuff
+			//expires, if this modifier still exists.
+			"modifier_plague_ward_datadriven_poison_sting_debuff_movement_speed"
+			{
+				"Passive"		"0"
+				"IsHidden"		"1"
+				"IsBuff"		"0"
+				"IsDebuff"		"1"
+				"IsPurgable"	"1"
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"-1"
+				}
+			}
+			
+			//A visible modifier.  Deals damage over time to the target, but only if the target does not also have a 
+			//Poison Sting debuff originating from Venomancer.
+			"modifier_plague_ward_datadriven_poison_sting_debuff"
+			{
+				"Passive"		"0"
+				"IsHidden"		"0"
+				"IsBuff"		"0"
+				"IsDebuff"		"1"
+				"IsPurgable"	"1"
+	
+				"ThinkInterval"	"1.0"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/venomancer/plague_ward.lua"
+						"Function"			"modifier_plague_ward_datadriven_debuff_on_interval_think"
+					}
+				}
+	
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/venomancer/plague_ward.lua"
+						"Function"			"modifier_plague_ward_datadriven_debuff_on_interval_think"
+					}
+				}
+			}
+		}		
+	}
+
+    "special_bonus_unique_venomancer_ward_duration"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "LinkedAbility"
+		{
+			"01" 	"venomancer_plague_ward_datadriven"
+		}
+        "AbilityValues"
+        {
+            "value" "20.0"
+        }            
+    }
+    
+    "special_bonus_unique_venomancer_ward_split_shot"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"            
+        "AbilityValues"
+        {
+            "additional_shots" "1"
+        }
+    }
+    "special_bonus_unique_venomancer_ward_true_strike"
+    {
+        "BaseClass"						"special_bonus_undefined"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"             
+    }
+
+	// Rewrite of the Venomancer Poison Nova ability
+	// Author: Pizzalol
+	// Date: 30.09.2015.
+	// NOTE: Doesnt travel as an expanding circle around the hero but instead acts as an instant AOE ability
+	"venomancer_poison_nova_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"venomancer_poison_nova"
+        "AbilityCastAnimation"			"ACT_DOTA_FLAIL"
+        "AbilityCastPoint"              "0.04"
+
+        "AbilityCastRange"				"%radius"
+        "AoERadius"               "%radius"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+			"particle"			"particles/units/heroes/hero_venomancer/venomancer_poison_nova.vpcf"
+			"particle"			"particles/units/heroes/hero_venomancer/venomancer_poison_debuff_nova.vpcf"
+			"particle"			"particles/units/heroes/hero_venomancer/venomancer_poison_nova_cast.vpcf"
+		}
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"140.0 120.0 100.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 400"		
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// just does damage
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "radius" "830"
+            "start_radius" "1 1 1"
+            "duration" "18.0"
+            "damage" "40 65 90"
+            "cooldown_scepter" "140.0 120.0 60.0"
+            "duration_scepter" "14.0 15.0 16.0"
+            "damage_scepter" "58 81 108"
+            "speed" "500 500 500"
+        }
+	
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Venomancer.PoisonNova"
+				"Target"		"CASTER"
+			}
+	
+			"FireEffect"
+			{
+				"EffectName"	"particles/units/heroes/hero_venomancer/venomancer_poison_nova_cast.vpcf"
+				"EffectAttachType"	"attach_origin"
+				"Target"		"CASTER"
+			}
+	
+			"FireEffect"
+			{
+				"EffectName"	"particles/units/heroes/hero_venomancer/venomancer_poison_nova.vpcf"
+				"EffectAttachType"	"start_at_customorigin"
+				
+				"ControlPointEntities"
+				{
+					"CASTER"	"attach_origin"
+				}
+	
+				"ControlPoints"
+				{
+					"01"	"%radius 0.7 %radius"
+					"02"	"0 0 0"
+				}
+			}
+	
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center"	"CASTER"
+					"Radius"	"%radius"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"		"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				}
+	
+				"Action"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"		"modifier_poison_nova_debuff_datadriven"
+						"Target"			"TARGET"
+						"Duration"			"%duration"
+					}
+				}
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_poison_nova_debuff_datadriven"
+			{
+				"IsDebuff"	"0"
+				"IsPurgable"	"0"			
+	
+				"EffectName"	"particles/units/heroes/hero_venomancer/venomancer_poison_debuff_nova.vpcf"
+				"EffectAttachType"	"follow_origin"
+	
+				"ThinkInterval"	"1.0"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/venomancer/poison_nova.lua"
+						"Function"		"PoisonNova"
+						"Target"		"TARGET"
+					}
+				}
+	
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Venomancer.PoisonNovaImpact"
+						"Target"		"TARGET"
+					}
+	
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/venomancer/poison_nova.lua"
+						"Function"		"PoisonNova"
+						"Target"		"TARGET"
+					}
+				}
+			}
+		}
+	}
+	
+	// Rewrite of the Venomancer Poison Sting ability
+	// Author: Pizzalol and Rook
+	// Date: 22.12.2014.
+	// Known bugs:
+	//     The Plague Ward interaction with Poison Sting is hardcoded in modifier_poison_sting_debuff_datadriven_on_destroy().
+	//         This can be fixed once we are able to determine the caster of a modifier.
+	"venomancer_poison_sting_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"venomancer_poison_sting"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "duration" "6.0 9.0 12.0 15.0"
+            "damage" "6 14 22 30"
+            "movement_speed" "-9 -11 -13 -15"
+        }
+	
+		"Modifiers"
+		{
+			"modifier_poison_sting_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+	
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{                        
+						"ModifierName"	"modifier_poison_sting_debuff_datadriven"
+						"Target"		"TARGET"
+					}
+				}
+			}
+	
+			"modifier_poison_sting_debuff_datadriven"
+			{
+				"IsDebuff"	"1"
+				"Duration"	"%duration"
+	
+				"ThinkInterval"	"1.0"
+	
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"%damage"
+					}
+				}
+	
+				"OnCreated"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"%damage"
+					}
+					
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/venomancer/poison_sting.lua"
+						"Function"			"modifier_poison_sting_debuff_datadriven_on_created"
+					}
+				}
+				
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/venomancer/poison_sting.lua"
+						"Function"			"modifier_poison_sting_debuff_datadriven_on_destroy"
+					}
+				}
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%movement_speed"
+				}
+			}
+		}
+	}
+	// Rewrite of the Venomancer Venomous Gale ability
+	// Author: Pizzalol
+	// Date: 30.09.2015.
+	"venomancer_venomous_gale_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				        "ability_datadriven"
+        "AbilityTextureName"			"venomancer_venomous_gale"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_POINT  | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+			"particle"			"particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf"
+			"particle"			"particles/units/heroes/hero_venomancer/venomancer_gale_poison_debuff.vpcf"
+		}
+
+        // Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"21.0 20.0 19.0 18.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "duration" "15"
+            "strike_damage" "35 65 95 115"
+            "tick_damage" "20 65 85 120"
+            "tick_interval" "3.0 3.0 3.0 3.0"
+            "movement_slow" "-50 -50 -50 -50"
+            "radius" "125 125 125 125"
+            "speed" "1200 1200 1200 1200"
+            "distance" "850"
+        }
+	
+		"OnSpellStart"
+		{
+			// "FireSound"
+			// {
+			// 	"EffectName"	"Hero_Venomancer.VenomousGale"
+			// 	"Target"		"CASTER"
+			// }
+	
+			"LinearProjectile"
+			{
+				"Target"      "POINT"
+			    "EffectName"  "particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf"
+			    "MoveSpeed"   "%speed"
+			    "StartRadius"   "%radius"
+			    "StartPosition" "attach_origin"
+			    "EndRadius"     "%radius"
+			    "FixedDistance" "%distance"
+			    "TargetTeams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+			    "TargetTypes"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+			    "TargetFlags"   "DOTA_UNIT_TARGET_FLAG_NONE"
+			    "HasFrontalCone"    "0"
+			    "ProvidesVision" "0"
+			}
+		}
+	
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+	
+			"FireSound"
+			{
+				"EffectName"	"Hero_Venomancer.VenomousGaleImpact"
+				"Target"		"TARGET"
+			}
+	
+			"Damage"
+			{
+				"Target"	"TARGET"
+				"Type"		"DAMAGE_TYPE_MAGICAL"
+				"Damage"	"%strike_damage"
+			}		
+	
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/venomancer/venomous_gale.lua"
+				"Function"		"VenomousGaleImpact"
+				"modifier"		"modifier_venomous_gale_debuff_datadriven"
+			}	
+		}
+	
+		"Modifiers"
+		{
+			"modifier_venomous_gale_debuff_datadriven"
+			{
+				"IsDebuff"	"1"			
+	
+				"EffectName"	"particles/units/heroes/hero_venomancer/venomancer_gale_poison_debuff.vpcf"
+				"EffectAttachType"	"follow_origin"
+	
+				"ThinkInterval"		"%tick_interval"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"%tick_damage"
+					}
+				}
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"-1"
+				}
+			}
+		}
+	}
+
+    "pathfinder_special_venomancer_bigass_ward_dummy"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "ScriptFile"					"heroes/venomancer/pathfinder_special_venomancer_bigass_ward_dummy"
+        "AbilityTextureName"            "venomancer_plague_ward_alt"        
+    }
+
+    "pathfinder_special_venomancer_banana_bomb"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"        
+        "AbilityTextureName"            "venomancer_venomous_gale"       
+        "AbilityValues"
+        {
+            "radius" "250"
+            "activation_delay" "2"
+        }
+    }
+
+    "pathfinder_special_venomancer_gale_bkb"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"        
+        "AbilityTextureName"            "venomancer_venomous_gale"       
+        "AbilityValues"
+        {
+            "duration" "1.0"
+            "max_duration" "16.0"
+        }
+    }
+
+    "pathfinder_venomancer_bigass_ward"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/venomancer/pathfinder_venomancer_bigass_ward"     
+        "AbilityTextureName"            "venomancer_plague_ward_alt"  
+        "AbilityCastAnimation"          "ACT_DOTA_VICTORY"
+        "MaxLevel"                      "1"
+        
+
+        "Precache"
+        {
+            "soundfile" "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
+            "soundfile" "soundevents/voscripts/game_sounds_vo_dragonknight.vsndevts"
+            "particle"	"particles/units/heroes/hero_bristleback/bristleback_viscous_nasal_goo_debuff.vpcf"
+        }
+
+        // Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"1.1"
+        "AbilityCastRange"				"500"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120"
+		"AbilityManaCost"				"120"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "health_multiplier" "3"
+            "regen_multiplier" "1"
+            "damage_multiplier" "3"
+        }
+	}
+
+    "pathfinder_special_venomancer_ward_global_attack"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_plague_ward"        
+        "AbilityValues"
+        {
+            "dmg_penalty" "-50"
+        }        
+    }
+
+    "special_bonus_unique_venomancer_ward_bonus_damage"
+    {
+        "BaseClass"						"ability_datadriven"
+        //"AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN" 
+        "AbilityTextureName"            "venomancer_plague_ward"
+        "AbilityTooltip"                "Increases the damage of Plague Wards by 12% of venomancers total damage." 
+        "LinkedAbility"
+        {
+            "01" "venomancer_plague_ward_datadriven"
+        }
+        "AbilityValues"
+        {
+            "bonus_damage_pct" "12"
+        }
+    }
+    "pathfinder_special_venomancer_ward_cast_nova"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_poison_nova"                
+    }
+    "pathfinder_special_venomancer_ward_nova"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_poison_nova"          
+        "AbilityValues"
+        {
+            "spawn_chance" "10"
+        }      
+    }
+    "pathfinder_special_venomancer_ward_lifesteal"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_plague_ward"       
+        "AbilityValues"
+        {
+            "lifesteal_percentage" "70"
+        }         
+    }
+
+    "pathfinder_special_venomancer_ward_corpse"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+        "ScriptFile"                    "heroes/venomancer/pathfinder_special_venomancer_ward_corpse.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_poison_sting"       
+        "AbilityValues"
+        {
+            "spawn_chance" "100"
+            "radius" "1000"
+            "additional_shots" "2"
+        }         
+    }
+
+    "pathfinder_special_venomancer_gale_attack"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"						"ability_lua"
+        "ScriptFile"                    "heroes/venomancer/pathfinder_special_venomancer_gale_attack.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"    
+        "AbilityTextureName"            "venomancer_venomous_gale"       
+        "AbilityValues"
+        {
+            "proc_chance" "17"
+            "extra_gales" "6"
+        }         
+    }
+}

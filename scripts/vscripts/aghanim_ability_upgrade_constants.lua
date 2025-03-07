@@ -318,7 +318,7 @@ _G.MINOR_ABILITY_UPGRADES =
    npc_dota_hero_vengefulspirit  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
  
 
-   npc_dota_hero_venomancer  = require( "minor_ability_upgrades/base_minor_stats_upgrades" ),
+   npc_dota_hero_venomancer = require( "minor_ability_upgrades/minor_ability_upgrades_venomancer" ),
  
 
 
@@ -620,7 +620,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    npc_dota_hero_gyrocopter = "gyrocopter_call_down",
    -- npc_dota_hero_dawnbreaker = "dawnbreaker_solar_guardian",
    -- npc_dota_hero_bane = "bane_fiends_grip",
-   -- npc_dota_hero_phoenix = "phoenix_supernova",
+    npc_dota_hero_phoenix = "phoenix_supernova",
    -- npc_dota_hero_sand_king = "sand_king_epicenter",
    -- npc_dota_hero_clinkz = "clinkz_burning_army",
    -- npc_dota_hero_invoker = "",
@@ -711,7 +711,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    -- npc_dota_hero_treant  ="",  
    -- npc_dota_hero_troll_warlord  ="",  
    -- npc_dota_hero_vengefulspirit  ="",  
-   -- npc_dota_hero_venomancer   ="",
+    npc_dota_hero_venomancer   ="venomancer_poison_nova",
    -- npc_dota_hero_visage  ="",  
    -- npc_dota_hero_warlock  ="",  
    -- npc_dota_hero_windrunner  ="",  
@@ -1228,7 +1228,14 @@ SPECIAL_ABILITY_UPGRADES["npc_dota_hero_axe"] =
    "empty_undefined_ability"
 }  
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_venomancer"] ={
-   "empty_undefined_ability"
+   "pathfinder_special_venomancer_ward_global_attack",
+   "pathfinder_special_venomancer_ward_lifesteal",
+   "pathfinder_special_venomancer_ward_nova",   
+   --"pathfinder_special_venomancer_bigass_ward_dummy",   
+   "pathfinder_special_venomancer_ward_corpse",
+   "pathfinder_special_venomancer_gale_attack",
+   "special_bonus_unique_venomancer_ward_bonus_damage",
+  -- "pathfinder_special_venomancer_gale_bkb",
 }
 
      SPECIAL_ABILITY_UPGRADES["npc_dota_hero_visage"] ={
@@ -1986,3 +1993,5 @@ require("heroes/zuus/aghanim_ability_upgrade_zuus")
 require("heroes/dawnbreaker/aghanim_ability_upgrade_dawnbreaker")
 require("heroes/bristleback/aghanim_ability_upgrade_constants")
 require("heroes/jakiro/aghanim_ability_upgrade_jakiro")
+require("heroes/phoenix/aghanim_ability_upgrade_phoenix")
+require("heroes/venomancer/aghanim_ability_upgrade_venomancer")
