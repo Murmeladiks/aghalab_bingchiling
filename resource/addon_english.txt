@@ -4670,5 +4670,444 @@
 		//>----------------------------------------------------------------------------------------------------------------------------------------------
 		//>----------------------------------------------------------------------------------------------------------------------------------------------
 
+
+			
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//-MARCI START------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		//---------------------------------------
+		//--- LEGENDARY -------------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_throw"	                                                        "Onward Unto The Breach"
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_throw_Description"	                                            "Dispose now allows Marci to throw the targeted unit unto any pathable location within a %max_throw_distance% radius. Allies thrown are buffed with Rebound's speed bonus upon landing."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_mass"	                                                        "Cuddlemania"
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_mass_Description"	                                            "Dispose now targets all units of the same team as the target in a %radius% radius around them. If the target is an enemy, Marci gains %cleave%%% cleave for the next %cleave_attacks% attacks."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_stun"	                                                        "A Stunning Disposition"
+		"DOTA_Tooltip_Ability_pathfinder_marci_grapple_stun_Description"	                                            "The primary target of Dispose is stunned by an additional %bonus_stun% seconds for each unit it lands on. While attacking enemies stunned by Dispose, Marci is buffed with the current level of Unleash. Unleash stacks are granted when Marci begins attacking a qualified target, and are removed when a non-attack command is issued, or if Marci begins attacking an unqualified target."
+
+
+
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_unleash"	                                                 "Fluff From Above"
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_unleash_Description"	                                     "Upon landing from Rebound, Marci is granted a single sequence of Unleash attacks. If the target Marci leaps off is an ally, both Marci and her target will be buffed with the current level of Sidekick."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_leap"	                                                        "I'm Walking Here"
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_leap_Description"	                                "When Rebound is self-cast, Marci will repeatedly leap unto nearby enemies and attack them instead of immediately landing. Each leap stuns for %stun_duration% second while also releasing an Unleash pulse. Rebound can be recast at any time to immediately land."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_global"	                                                        "Ain't No Mountain High Nor Valley Low"
+		"DOTA_Tooltip_Ability_pathfinder_marci_companion_run_global_Description"	                                            "Rebound gains global cast range, and %bonus_leap_distance% bonus leap distance. Upon leaping, Marci disposes the target along with her to the destination. Upon landing, Marci and any allied passenger heal for %heal_percent%%% of their max health."
+
+
+
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_permanent"	                                                        "Unyelding Loyalty"
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_permanent_Description"	                                            "Sidekick's buff remains permanently active, but its damage and healing are reduced by half. When cast, Sidekick applies a strong dispel unto the target, while also silencing and disarming all nearby enemies."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_enemy"	                                                        "Hushed Retribution"
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_enemy_Description"	                                            "Sidekick can be cast on an enemy. Every 6 seconds, that unit releases a massive pulse, healing all friendly heroes for %damage_to_heal_perc%%% of all damage it dealt during the past 6 seconds period, while damaging all other enemies for the same amount."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_kick"	                                                        "One Too Many"
+		"DOTA_Tooltip_Ability_pathfinder_marci_guardian_kick_Description"	                                            "Casting Sidekick causes the target to perform a roundhouse kick, instantly attacking nearby enemies in a %radius% radius. For each %health_percent_per_kick%%% of health missing, the target attacks each enemy 1 additional time."
+
+
+
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_passive"	                                                        "Hell Hath No Fury"
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_passive_Description"	                                            "Unleash passively grants Marci a single sequence of Unleash attacks every 5 seconds. This can be reduced with cooldown reduction. While having no Unleash stacks, Marci is disarmed. When Unleash is activated, Marci gains %bonus_attack_range% attack range."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_pulse"	                                                        "Therapeutic Violence"
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_pulse_Description"	                                            "Unleash's final pulse is now triggered on every other Unleash attack. Allies within the pulse radius are healed for half of its damage."
+
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_bash"	                                                        "Wax On"
+		"DOTA_Tooltip_Ability_pathfinder_marci_unleash_bash_Description"	                                            "Sidekick now also grants the target a single sequence of Unleash attack. Additionally, Unleash attacks have a %chance%%% chance to bash in a %bash_radius% area for %bash_duration% seconds."
+
+
+		//---------------------------------------
+		//--- ABILITY ---------------------------
+		//---------------------------------------
+
+		// Marci
+		"DOTA_Tooltip_ability_marci_grapple_pf"							"Dispose"
+		"DOTA_Tooltip_ability_marci_grapple_pf_Description"				"Marci grabs an allied or enemy target and throws it effortlessly behind her, damaging and stunning the unit if it's an enemy. Any enemy units in the landing area will also be damaged and stunned."
+		"DOTA_Tooltip_ability_marci_grapple_pf_Lore"				"Marci excels at removing obstacles from Princess Mirana's path."
+		"DOTA_Tooltip_ability_marci_grapple_pf_throw_distance_behind"		"THROW DISTANCE:"
+		"DOTA_Tooltip_ability_marci_grapple_pf_stun_duration"				"STUN DURATION:"
+		"DOTA_Tooltip_ability_marci_grapple_pf_impact_damage"				"IMPACT DAMAGE:"
+		"DOTA_Tooltip_ability_marci_grapple_pf_landing_radius"				"LANDING RADIUS:"
+
+		"DOTA_Tooltip_ability_marci_unleash_lua"						"Unleash"
+		"DOTA_Tooltip_ability_marci_unleash_lua_Description"			"Marci taps a hidden power, gaining Fury charges that allow her to deliver a rapid sequence of strikes. The last strike in every Fury combo creates a damaging pulse around the target that slows movement and attack speed for %pulse_debuff_duration%s. In between Fury combos, Marci is unable to attack for %time_between_flurries%s.\n\nMarci receives a basic dispel when Unleash is cast and gains %bonus_movespeed%%% movement speed."
+		"DOTA_Tooltip_ability_marci_unleash_lua_Note0"					"Once a Fury combo is started, each attack must be delivered within 1s or the Fury combo expires."
+		"DOTA_Tooltip_ability_marci_unleash_lua_Lore"					"Though some have sought to understand its origins, Marci rebuffs all attempts to divine the source of her power."
+		"DOTA_Tooltip_ability_marci_unleash_lua_duration"				"DURATION:"
+		"DOTA_Tooltip_ability_marci_unleash_lua_charges_per_flurry"		"STRIKES PER FURY:"
+		"DOTA_Tooltip_ability_marci_unleash_lua_pulse_radius"			"PULSE RADIUS:"
+		"DOTA_Tooltip_ability_marci_unleash_lua_pulse_damage"			"PULSE DAMAGE:"
+		"DOTA_Tooltip_ability_marci_unleash_lua_pulse_move_slow_pct"	"%PULSE MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_marci_unleash_lua_pulse_attack_slow_pct"	"PULSE ATTACK SLOW:"
+
+		"DOTA_Tooltip_modifier_marci_unleash_lua"						"Unleash"
+		"DOTA_Tooltip_modifier_marci_unleash_lua_Description"			"Gains attack Fury combos."
+
+		"DOTA_Tooltip_modifier_pathfinder_marci_unleash_passive"						"Unleash Passive Shard"
+		"DOTA_Tooltip_modifier_pathfinder_marci_unleash_passive_Description"			"Gains Fury combos every %fMODIFIER_PROPERTY_TOOLTIP% seconds."
+
+		"DOTA_Tooltip_modifier_marci_unleash_lua_fury"				"Unleash - Fury"
+		"DOTA_Tooltip_modifier_marci_unleash_lua_fury_Description"	"This unit has greatly increased attack speed."
+
+		"DOTA_Tooltip_modifier_marci_unleash_lua_recovery"				"Unleash - Fury Cooldown"
+		"DOTA_Tooltip_modifier_marci_unleash_lua_recovery_Description"	"Waiting for the next Fury strikes."
+
+		"DOTA_Tooltip_modifier_marci_unleash_flurry_pulse_debuff"				"Unleash - Pulse"
+		"DOTA_Tooltip_modifier_marci_unleash_flurry_pulse_debuff_Description"	"This unit has slowed movement and attack speed."
+
+		"DOTA_Tooltip_modifier_marci_unleash_pulse_silence"				"Unleash - Pulse Silence"
+		"DOTA_Tooltip_modifier_marci_unleash_pulse_silence_Description"	"This unit is silenced."
+
+		"DOTA_Tooltip_ability_marci_companion_run_pf"						"Rebound"
+		"DOTA_Tooltip_ability_marci_companion_run_pf_Description"			"Vector targeted. Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and slowing enemies in the area.\n\nIf the unit she runs to is an ally, it receives %ally_movespeed_pct%%% bonus movement speed for %ally_buff_duration%s."
+		"DOTA_Tooltip_ability_marci_companion_run_pf_Lore"			"With a friendly or brazen boost, Marci can find her way into the midst of any fight."
+		"DOTA_Tooltip_ability_marci_companion_run_pf_Note0"				"Has %min_jump_distance% minimum jump distance."
+		"DOTA_Tooltip_ability_marci_companion_run_pf_Note1"				"Marci's initial run to her target unit can be disjointed."
+		"DOTA_Tooltip_ability_marci_companion_run_pf_impact_damage"		"IMPACT DAMAGE:"
+		"DOTA_Tooltip_ability_marci_companion_run_pf_movement_slow_pct"	"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_marci_companion_run_pf_debuff_duration"		"SLOW DURATION:"
+		"DOTA_Tooltip_ability_marci_companion_run_pf_max_jump_distance"	"CAST / JUMP RANGE:"
+
+		"DOTA_Tooltip_modifier_marci_companion_run_pf_debuff"						"Rebound"
+		"DOTA_Tooltip_modifier_marci_companion_run_pf_debuff_Description"			"This unit has slowed movement speed."
+
+		"DOTA_Tooltip_modifier_marci_companion_run_pf_buff"				"Rebound"
+		"DOTA_Tooltip_modifier_marci_companion_run_pf_buff_Description"	"This unit has bonus movement speed."
+
+		"DOTA_Tooltip_modifier_marci_companion_lunge_ally_buff"				"Rebound"	
+		"DOTA_Tooltip_modifier_marci_companion_lunge_ally_buff_Description"	"This unit has a protective shield that blocks physical damage."	
+
+		"DOTA_Tooltip_ability_marci_guardian_pf"						"Sidekick"
+		"DOTA_Tooltip_ability_marci_guardian_pf_Description"			"Marci's loyalty helps ensure survival, imbuing a chosen allied hero and herself with lifesteal and attack damage."
+		"DOTA_Tooltip_ability_marci_guardian_pf_Note0"					"Marci can self-cast Sidekick to buff herself and the nearest allied hero within %nearest_ally_search_range% range."
+		"DOTA_Tooltip_ability_marci_guardian_pf_Lore"					"Marci learned at a young age that the best asset in a scrap is a steady companion."
+		"DOTA_Tooltip_ability_marci_guardian_pf_buff_duration"			"DURATION:"
+		"DOTA_Tooltip_ability_marci_guardian_pf_lifesteal_pct"			"%LIFESTEAL:"
+		"DOTA_Tooltip_ability_marci_guardian_pf_bonus_damage"			"BONUS DAMAGE:"
+
+		"DOTA_Tooltip_modifier_marci_guardian_pf"					"Sidekick"
+		"DOTA_Tooltip_modifier_marci_guardian_pf_Description"		"This unit has lifesteal and bonus damage."
+
+		"DOTA_Tooltip_modifier_marci_guardian_pf_permanent"					"Sidekick Permanent"
+		"DOTA_Tooltip_modifier_marci_guardian_pf_permanent_Description"		"This unit has lifesteal and bonus damage."
+
+		"DOTA_Tooltip_modifier_marci_guardian_magic_immunity"				"Sidekick"
+		"DOTA_Tooltip_modifier_marci_guardian_magic_immunity_Description"	"This unit is spell immune."
+
+
+		//---------------------------------------
+		//--- MINOR SHARD -----------------------
+		//---------------------------------------
+
+		"marci_grapple_pf_stun"			"+{s:value} {s:ability_name} Stun Duration"
+		"marci_grapple_pf_damage"		"+{s:value} {s:ability_name} Impact Damage"
+		"marci_grapple_pf_radius"		"+{s:value} {s:ability_name} Landing Radius"
+		"marci_grapple_pf_cooldown"		"-{s:value}% {s:ability_name} Cooldown"
+
+		"marci_companion_run_pf_damage"					"+{s:value} {s:ability_name} Impact Damage"
+		"marci_companion_run_pf_jump"					"+{s:value} {s:ability_name} Max Jump Distance"
+		"marci_companion_run_pf_debuff_duration"		"+{s:value} seconds {s:ability_name} Debuff Duration"
+		"marci_companion_run_pf_cooldown"				"-{s:value}% {s:ability_name} Cooldown"
+
+		"marci_guardian_pf_duration"			"+{s:value} seconds {s:ability_name} Buff Duration"
+		"marci_guardian_pf_lifesteal"			"+{s:value}% {s:ability_name} Lifesteal"
+		"marci_guardian_pf_damage"				"+{s:value} {s:ability_name} Bonus Damage"
+		"marci_guardian_pf_cooldown"			"-{s:value}% {s:ability_name} Cooldown"
+
+		"marci_unleash_lua_duration"			"+{s:value} seconds {s:ability_name} Duration"
+		"marci_unleash_lua_charges"		"+{s:value} {s:ability_name} Strike Per Fury"
+		"marci_unleash_lua_flurries_cd"		"{s:value}% {s:ability_name} Cooldown Between Furies"
+		"marci_unleash_lua_damage"		"+{s:value} {s:ability_name} Pulse Damage"
+
+
+		//---------------------------------------
+		//--- BRISTLE SHARD ---------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_stun"		            "Dispose: Stun Duration"
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_stun_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Stun Duration by %value% seconds."
+
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_damage"		            "Dispose: Impact Damage"
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Impact Damage by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_radius"		            "Dispose: Landing Radius"
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_radius_Description"		"<h1>Common Scepter Fragment</h1>Increases Dispose Landing Radius by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_cooldown"		        "Dispose: Cooldown"
+		"DOTA_Tooltip_Ability_item_marci_grapple_pf_cooldown_Description"	"<h1>Common Scepter Fragment</h1>Decreases Dispose Cooldown by %value%%%."
+
+
+
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_damage"		            	"Rebound: Impact Damage"
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_damage_Description"			"<h1>Common Scepter Fragment</h1>Increases Rebound Impact Damage by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_jump"		            		"Rebound: Max Jump Distance"
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_jump_Description"				"<h1>Common Scepter Fragment</h1>Increases Rebound Max Jump Distance by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_debuff_duration"		        "Rebound: Debuff Duration"
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_debuff_duration_Description"	"<h1>Common Scepter Fragment</h1>Increases Rebound Debuff Duration by %value% seconds."
+
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_cooldown"		            	"Rebound: Cooldown"
+		"DOTA_Tooltip_Ability_item_marci_companion_run_pf_cooldown_Description"			"<h1>Common Scepter Fragment</h1>Decreases Rebound Cooldown by %value%%%."
+
+
+
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_duration"		            "Sidekick: Duration"
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_Description"				"<h1>Common Scepter Fragment</h1>Increases Sidekick Duration by %value% seconds."
+
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_lifesteal"		            "Sidekick: Lifesteal"
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_lifesteal_Description"		"<h1>Common Scepter Fragment</h1>Increases Sidekick Lifesteal by %value%%%."
+
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_damage"		            "Sidekick: Damage"
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Sidekick Damage by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_cooldown"		            "Sidekick: Cooldown"
+		"DOTA_Tooltip_Ability_item_marci_guardian_pf_cooldown_Description"		"<h1>Common Scepter Fragment</h1>Decreases Sidekick Cooldown by %value%%%."
+
+
+
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_duration"		            "Unleash: Duration"
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_duration_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Duration by %value% seconds."
+
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_charges"		            "Unleash: Striker per Fury"
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_charges_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Strikes per Fury by %value%."
+
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_flurries_cd"		        "Unleash: Time between Fury combos"
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_flurries_cd_Description"	"<h1>Common Scepter Fragment</h1>Decreases Unleash Time between Fury combos by %value%%%."
+
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_damage"		            "Unleash: Pulse Damage"
+		"DOTA_Tooltip_Ability_item_marci_unleash_lua_damage_Description"		"<h1>Common Scepter Fragment</h1>Increases Unleash Pulse Damage by %value%."
+
+
+		//---------------------------------------
+		//--- TALENT TREE -----------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_pathfinder_special_bonus_unique_marci_companion_run_heal" 	"Dispose 40% max health healing"
+
+
+		//---------------------------------------
+		//--- MODIFIER --------------------------
+		//---------------------------------------
+
+
+		"npc_dota_hero_marci_full_title"									"MARCI, THE SILENT FRIEND"
+		"npc_dota_hero_marci_full_title_intro"								"Through countless planes her loyalty shines of hushed brilliance"
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//-MARCI END--------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+
+		
+		
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//-DK START-------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		//---------------------------------------
+		//--- LEGENDARY -------------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_stun"	                                    "Morning Breaths"
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_stun_Description"	                        "Each unit hit by Breathe Fire has a %chance%%% chance to be stunned and damaged by the current level of Dragon Tail"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_macropyre"	                                "Dracarys"
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_macropyre_Description"	                    "Breathe Fire leaves behind a trail of fiery flames. The fire lasts %duration% seconds and deals %damage_percent%%% of the ability's damage every %interval% second"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_crit_lifesteal"	                        "Flame Buffet"
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_crit_lifesteal_Description"	            "While attacking a unit currently afflicted with the Breathe Fire debuff, Dragon Knight has %chance%%% chance to critical strike for %crit_mult%%% damage. These critical attacks heals Dragon Knight for %lifesteal%%% of the damage dealt"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_passive"	                                "Blade Scales"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_passive_Description"	                    "When attacked, Dragon Knight has a %chance%%% chance to immediately retaliate with the current level of Dragon Tail"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_bounce"	                                    "Swift Saphira"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_bounce_Description"	                        "Dragon Tail gains %bonus_range% bonus cast range. Upon impact, it bounces %bounces% additional times to nearby enemies. After its final bounce, the projectile returns to Dragon Knight, stunning all foes around him"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_chain"	                                    "Soul Feast"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_chain_Description"	                        "Dragon Tail tethers Dragon Knight to the primary target. While linked, Dragon Knight can never be killed by the target, and %reflect_percentage%%% of the damage he takes is reflected back unto the tethered opponent. The tether lasts %duration% seconds, and has a maximum length of %max_distance% "
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_damage"	                                "Boiling Veins"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_damage_Description"	                    "Dragon Blood passively charges up over %max_stack% seconds, empowering Dragon Knight's next strike with bonus magical damage. The amount of bonus damage gained every second is equal to Dragon Knight's total health regeneration. If proc'd at maximum damage, the attack also heals Dragon Knight for %heal%%% of damage dealt"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_gold"	                                    "Hoard of Babylon"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_gold_Description"	                        "For every %gold_per_armor% unspent gold, Dragon Knight gains 1 bonus armor. For every %gold_per_magic_resist% unspent gold, he also gains 1% magic resistance"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_active"	                                "Pyroclastic Conflagration"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_blood_active_Description"	                    "Dragon Blood can be activated to grant Dragon Knight %duration% seconds of magic immunity. When activated, it creates a fiery blast that knocks back enemies within a %radius% radius. Affected units are stunned for %stun_duration% seconds and take damage equal to %regen_damage_mult%%% of Dragon Knight's total health regeneration"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_attack"	                            "Fang of Galakrond"
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_attack_Description"	                "After every %attack% attacks in human form, Dragon Knight's next attack is empowered by the current level of Elder Dragon Form. While transformed, Dragon Knight's attack projectile bounces to an additional nearby target, dealing full damage and applying Elder Dragon Form's debuff"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_fear"	                                "Beneath The Shadow of My Wings"
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_fear_Description"	                    "Upon transforming into Dragon Form, Dragon Knight casts the current level of Breathe Fire in all directions around himself and applies fear to all enemies within a %radius% radius for %duration% seconds"
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_cdr"	                                "Blessing of Ancalagon"
+		"DOTA_Tooltip_Ability_pathfinder_dk_elder_dragon_form_cdr_Description"	                    "The cooldown of Elder Dragon Form is reduced by %cdr% seconds every time Dragon Knight takes damage. If Dragon Knight receives lethal damage while Elder Dragon Form is off cooldown, the ability is instantly activated and he is healed to %heal%%% of his max health"
+
+
+		//---------------------------------------
+		//--- ABILITY ---------------------------
+		//---------------------------------------
+		"DOTA_Tooltip_Ability_dragon_knight_pf_inherited_vigor"														"Inherited Vigor"
+		"DOTA_Tooltip_Ability_dragon_knight_pf_inherited_vigor_Description"											"Dragon Knight's health regeneration is increased by 0.5 per level and his armor is increased by 0.5 per level."
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire"	                                                        "Breathe Fire"
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_Description"	                                            "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal."
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_range"		                                                "Distance: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_reduction"		                                            "%Attack Damage Reduction: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_duration"		                                            "Debuff Duration: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_breathe_fire_damage"		                                            "Damage: "
+
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail"	                                                        "Dragon Tail"
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_Description"	                                            "Dragon Knight smites an enemy unit in melee range with his shield, stunning and performing an instant attack upon the target along with any nearby foe. When in Elder Dragon Form, the cast range and effect radius are increased. Instant attacks performed by Dragon Tail can proc on-hit effects."
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_stun_duration"	                                            "Stun Duration: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_dragon_cast_range"	                                        "Bonus Dragon Form Cast Range: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_attack_damage"	                                            "%Instant Attack Damage: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_radius"	                                                    "Radius: "
+		"DOTA_Tooltip_Ability_pathfinder_dk_dragon_tail_dragon_radius_mult"	                                        "%Bonus Dragon Form Radius: "
+
+		"DOTA_Tooltip_Ability_dragon_knight_pf_dragon_blood"	                                                        "Dragon Blood"
+		"DOTA_Tooltip_Ability_dragon_knight_pf_dragon_blood_Description"                                               "The life blood of the Dragon improves health regeneration and strengthens armor."
+		"DOTA_Tooltip_Ability_dragon_knight_pf_dragon_blood_bonus_health_regen"	                                    "Health Regen Bonus: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_dragon_blood_bonus_armor"	                                            "Armor Bonus: "
+
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form"	                                                    "Elder Dragon Form"
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_Description"	                                        "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers. \n<font color=\"#9acd32\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal poison damage over time.\n<font color=\"#ff0000\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks affect all enemies near the primary target.\n<font color=\"#34a8eb\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed and attack speed of affected units."
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_duration"	                                            "Duration: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_bonus_movement_speed"	                                "Bonus Movement Speed: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_bonus_attack_range"	                                "Bonus Attack Range: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_bonus_attack_damage"	                                "Bonus Attack Damage: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_corrosive_breath_damage"	                            "Corrosive Damage per Second: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_corrosive_breath_duration"	                        "Corrosive Debuff Duration: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_splash_radius"	                                    "Splash Attack Radius: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_splash_damage_percent"	                            "%Splash Damage: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_frost_bonus_movement_speed"	                        "Frost Movement Speed Reduction: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_frost_bonus_attack_speed"	                            "Frost Attack Speed Reduction: "
+		"DOTA_Tooltip_Ability_dragon_knight_pf_elder_dragon_form_frost_duration"	                                    "Frost Debuff Duration: "
+
+
+		//---------------------------------------
+		//--- MINOR SHARD -----------------------
+		//---------------------------------------
+
+		"pathfinder_dk_breathe_fire_range"			                                                                "+{s:value} {s:ability_name} Distance"
+		"pathfinder_dk_breathe_fire_reduction"			                                                            "+{s:value}% {s:ability_name} Attack Damage Reduction"
+		"pathfinder_dk_breathe_fire_duration"			                                                            "+{s:value}s {s:ability_name} Debuff Duration"
+		"pathfinder_dk_breathe_fire_damage"			                                                                "+{s:value} {s:ability_name} Damage"
+		"pathfinder_dk_breathe_fire_pct_cooldown"			                                                        "-{s:value}% {s:ability_name} Cooldown"
+
+		"pathfinder_dk_dragon_tail_stun_duration"			                                                        "+{s:value}s {s:ability_name} Stun Duration"
+		"pathfinder_dk_dragon_tail_attack_damage"			                                                        "+{s:value}% {s:ability_name} Instant Attack Damage"
+		"pathfinder_dk_dragon_tail_radius"			                                                                "+{s:value} {s:ability_name} Effect Radius"
+		"pathfinder_dk_dragon_tail_pct_cooldown"			                                                        "-{s:value}% {s:ability_name} Cooldown"
+
+		"pathfinder_dk_dragon_blood_bonus_health_regen"			                                                    "+{s:value} {s:ability_name} Health Regeneration Bonus"
+		"pathfinder_dk_dragon_blood_bonus_armor"			                                                        "+{s:value} {s:ability_name} Armour Bonus"
+
+		"pathfinder_dk_elder_dragon_form_duration"			                                                        "+{s:value}s {s:ability_name} Duration"
+		"pathfinder_dk_elder_dragon_form_bonus_movement_speed"			                                            "+{s:value} {s:ability_name} Bonus Movement Speed"
+		"pathfinder_dk_elder_dragon_form_bonus_attack_range"			                                            "+{s:value} {s:ability_name} Bonus Attack Range"
+		"pathfinder_dk_elder_dragon_form_bonus_attack_damage"			                                            "+{s:value} {s:ability_name} Bonus Attack Damage"
+		"pathfinder_dk_elder_dragon_form_pct_cooldown"			                                                    "-{s:value}% {s:ability_name} Cooldown"
+
+
+		//---------------------------------------
+		//--- BRISTLE SHARD ---------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_range"				                                "Breathe Fire - Distance"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_reduction"				                            "Breathe Fire - Attack Damage Reduction"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_duration"			    	                            "Breathe Fire - Debuff Duration"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_damage"		    		                            "Breathe Fire - Damage"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_pct_cooldown" 				                        "Breathe Fire - Cooldown"
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_range_Description"				                    "<h1>Common Scepter Fragment</h1>Increases Breathe Fire Distance by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_reduction_Description"	                            "<h1>Common Scepter Fragment</h1>Increases Breathe Fire Attack Damage Reduction by %value%%% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_duration_Description"				                    "<h1>Common Scepter Fragment</h1>Increases Breathe Fire Debuff Duration by %value% seconds"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_damage_Description"				                    "<h1>Common Scepter Fragment</h1>Increases Breathe Fire Damage by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_breathe_fire_pct_cooldown_Description"				                "<h1>Common Scepter Fragment</h1>Decreases Breathe Fire Cooldown by %value%%% "
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_stun_duration"				                            "Dragon Tail - Stun Duration"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_attack_damage"				                            "Dragon Tail - Instant Attack Damage"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_radius"				                                "Dragon Tail - Effect Radius"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_pct_cooldown"				                            "Dragon Tail - Cooldown"
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_stun_duration_Description"				                "<h1>Common Scepter Fragment</h1>Increases Dragon Tail Stun Duration by %value% seconds"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_attack_damage_Description"				                "<h1>Common Scepter Fragment</h1>Increases Dragon Tail Instant Attack Damage by %value%%% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_radius_Description"				                    "<h1>Common Scepter Fragment</h1>Increases Dragon Tail Effect Radius by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_tail_pct_cooldown_Description"				                "<h1>Common Scepter Fragment</h1>Decreases Dragon Tail Cooldown by %value%%%"
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_blood_bonus_health_regen"				                    "Dragon Blood - Bonus Health Regeneration"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_blood_bonus_armor"				                            "Dragon Blood - Bonus Armor"
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_blood_bonus_health_regen_Description"				        "<h1>Common Scepter Fragment</h1>Increases Dragon Blood Health Regeneration Bonus by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_dragon_blood_bonus_armor_Description"				                "<h1>Common Scepter Fragment</h1>Increases Dragon Blood Armor Bonus by %value% "
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_duration"				                        "Elder Dragon Form - Duration"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_movement_speed"				            "Elder Dragon Form - Bonus Movement Speed"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_attack_range"				                "Elder Dragon Form - Bonus Attack Range"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_attack_damage"				                "Elder Dragon Form - Bonus Attack Damage"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_pct_cooldown"				                    "Elder Dragon Form - Cooldown"
+
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_duration_Description"				            "<h1>Common Scepter Fragment</h1>Increases Elder Dragon Form Duration by %value% seconds"
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_movement_speed_Description"				"<h1>Common Scepter Fragment</h1>Increases Elder Dragon Form Bonus Movement Speed by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_attack_range_Description"				    "<h1>Common Scepter Fragment</h1>Increases Elder Dragon Form Bonus Attack Range by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_bonus_attack_damage_Description"				    "<h1>Common Scepter Fragment</h1>Increases Elder Dragon Form Bonus Attack Damage by %value% "
+		"DOTA_Tooltip_Ability_item_pathfinder_dk_elder_dragon_form_pct_cooldown_Description"				        "<h1>Common Scepter Fragment</h1>Decreases Elder Dragon Form Cooldown by %value%%% "
+
+		//---------------------------------------
+		//--- TALENT TREE -----------------------
+		//---------------------------------------
+
+		"DOTA_Tooltip_Ability_special_bonus_unique_dragon_knight_dragon_tail_radius"	                    	"+60 Dragon Tail Radius"
+		"DOTA_Tooltip_Ability_special_bonus_pathfinder_pathfinder_dk_elder_dragon_form+bonus_attack_range"	    "+{s:bonus_attack_range} Dragon Form Bonus Attack Range"
+		"DOTA_Tooltip_Ability_special_bonus_unique_pathfinder_dk_breathe_fire"	                                "Breathe Fire Reduces All Damage Types"
+
+
+		//---------------------------------------
+		//--- MODIFIER --------------------------
+		//---------------------------------------
+
+
+		"DOTA_Tooltip_modifier_pathfinder_dk_elder_dragon_form"                                                 "Big Scary Dragon"
+		"DOTA_Tooltip_modifier_pathfinder_dk_elder_dragon_form_Description"                                     "Look at me I'm a big strong lizard, rawr!"
+
+		"DOTA_Tooltip_modifier_pathfinder_dk_breathe_fire"                                                      "Breathed Fire"
+		"DOTA_Tooltip_modifier_pathfinder_dk_breathe_fire_Description"                                          "Damage currently reduced."
+
+		"DOTA_Tooltip_modifier_pathfinder_dk_dragon_tail_chain"                                                 "Bound by Blood"
+		"DOTA_Tooltip_modifier_pathfinder_dk_dragon_tail_chain_Description"                                     "Health is being drained, while receiving a portion of damage taken by Dragon Knight."
+
+		"DOTA_Tooltip_modifier_pathfinder_dk_dragon_blood_damage"                                               "Draconic Fury"
+		"DOTA_Tooltip_modifier_pathfinder_dk_dragon_blood_damage_Description"                                   "Empowering Dragon Knight's next attack with bonus damage equal to number of stacks. If proc'd at max stacks, also heals Dragon Knight for damage dealt"
+
+
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//-DK END---------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 	}
+	
 }

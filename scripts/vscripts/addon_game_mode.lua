@@ -14,6 +14,7 @@ require("libraries/utils/data_structure")
 require( "libraries/utils/talent" )
 require( "libraries/utils/modifier" )
 require("libraries/utils/ability")
+require("libraries/utils")
 require("libraries/utils/abilitychargecontroller")
 --require("libraries/timers")
 require( "constants" ) -- require constants first

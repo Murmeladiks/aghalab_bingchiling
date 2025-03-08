@@ -620,7 +620,7 @@ _G.ULTIMATE_ABILITY_NAMES =
    npc_dota_hero_gyrocopter = "gyrocopter_call_down",
    -- npc_dota_hero_dawnbreaker = "dawnbreaker_solar_guardian",
    -- npc_dota_hero_bane = "bane_fiends_grip",
-    npc_dota_hero_phoenix = "phoenix_supernova",
+   -- npc_dota_hero_phoenix = "phoenix_supernova",
    -- npc_dota_hero_sand_king = "sand_king_epicenter",
    -- npc_dota_hero_clinkz = "clinkz_burning_army",
    -- npc_dota_hero_invoker = "",
@@ -1991,7 +1991,9 @@ require("heroes/tidehunter/aghanim_ability_upgrade_tidehunter")
 require("heroes/axe/aghanim_ability_upgrade_axe")
 require("heroes/zuus/aghanim_ability_upgrade_zuus")
 require("heroes/dawnbreaker/aghanim_ability_upgrade_dawnbreaker")
-require("heroes/bristleback/aghanim_ability_upgrade_constants")
+--require("heroes/bristleback/aghanim_ability_upgrade_constants")
 require("heroes/jakiro/aghanim_ability_upgrade_jakiro")
-require("heroes/phoenix/aghanim_ability_upgrade_phoenix")
+--require("heroes/phoenix/aghanim_ability_upgrade_phoenix")
 require("heroes/venomancer/aghanim_ability_upgrade_venomancer")
+--require("heroes/marci/aghanim_ability_upgrade_constants")
+--require("heroes/dragon_knight/aghanim_ability_upgrade_dragon_knight")

@@ -1,7 +1,31 @@
 axe_battle_hunger_lua = class({})
 LinkLuaModifier( "modifier_axe_battle_hunger_lua", "heroes/axe/modifier_axe_battle_hunger_lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_axe_battle_hunger_lua_debuff", "heroes/axe/modifier_axe_battle_hunger_lua_debuff", LUA_MODIFIER_MOTION_NONE )
+FindRadius = function(unit, radius, isEnemy)
+    if not IsServer() then
+        return
+    end
+    local search_team = DOTA_UNIT_TARGET_TEAM_ENEMY
+    if not isEnemy then
+        search_team = DOTA_UNIT_TARGET_TEAM_FRIENDLY
+    end
+    local units = FindUnitsInRadius(unit:GetTeamNumber(), unit:GetAbsOrigin(), nil, radius, search_team,
+        DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+    return units
+end
 
+FindRadiusPoint = function(caster, point, radius, isEnemy)
+    if not IsServer() then
+        return
+    end
+    local search_team = DOTA_UNIT_TARGET_TEAM_ENEMY
+    if not isEnemy then
+        search_team = DOTA_UNIT_TARGET_TEAM_FRIENDLY
+    end
+    local units = FindUnitsInRadius(caster:GetTeamNumber(), point, nil, radius, search_team,
+        DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+    return units
+end
 
 function axe_battle_hunger_lua:OnSpellStart()
 	local caster = self:GetCaster()
@@ -10,6 +34,7 @@ function axe_battle_hunger_lua:OnSpellStart()
 	local duration = self:GetSpecialValueFor("duration")
 
 	local enemies = FindRadiusPoint(caster, target_loc, self:GetSpecialValueFor("radius"), true)
+	
 
 	for _,target in pairs(enemies) do
 		target:AddNewModifier(

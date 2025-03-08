@@ -29,6 +29,7 @@ function modifier_tidehunter_pf_blubber:IsHidden()		return true end
 
 ------------------------------------------------------------------------------------
 
+
 function modifier_tidehunter_pf_blubber:OnCreated()
 	if not IsServer() then return end
 	
@@ -87,8 +88,8 @@ function modifier_tidehunter_pf_blubber:OnTakeDamage(event)
 		self.last_gush_purge = GameRules:GetGameTime()
 
 		local hGushedTargets = {}
-		local nRadius = hCaster:FindTalentValue("tidehunter_kraken_shell_pf_gush", "radius")
-		local nTargetCount = hCaster:FindTalentValue("tidehunter_kraken_shell_pf_gush", "targets")
+		local nRadius = hCaster:GetSpecialValueFor("tidehunter_kraken_shell_pf_gush", "radius")
+		local nTargetCount = hCaster:GetSpecialValueFor("tidehunter_kraken_shell_pf_gush", "targets")
 		local hEnemies = FindUnitsInRadius(hCaster:GetTeamNumber(), hCaster:GetAbsOrigin(), nil, nRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 0, false)
 		local i = nTargetCount
 
@@ -110,7 +111,7 @@ function modifier_tidehunter_pf_blubber:OnTakeDamage(event)
 	
 	if hCaster:HasAbility("tidehunter_kraken_shell_pf_ravage_cdr") then
 		local hRavageAbility = hCaster:FindAbilityByName("tidehunter_ravage_pf")
-		local nCooldownPct = hCaster:FindTalentValue("tidehunter_kraken_shell_pf_ravage_cdr", "cdr_percent") / 100
+		local nCooldownPct = hCaster:GetSpecialValueFor("tidehunter_kraken_shell_pf_ravage_cdr", "cdr_percent") / 100
 		local special = hCaster:FindAbilityByName("tidehunter_kraken_shell_pf_ravage_cdr")	
 
 		if hRavageAbility:IsTrained() and not hRavageAbility:IsCooldownReady() then
